@@ -1,0 +1,130 @@
+::selection {
+    background-color: black;
+    color: white; 
+}
+#holder {
+    position: relative; 
+    margin: auto; 
+    width: 40em; 
+    top: 2em; 
+    border-radius: 1%;
+    height: 40em;
+    /*try to make the height adjust automatically?*/
+}
+.gallery {    
+    position: absolute;
+    background: white; 
+    margin: auto;
+    width: 40em;     border-radius: 1%;
+    text-align: center;
+    z-index: 5; 
+}
+.gallery img {
+    display: inline;
+    width: 30%;
+    padding: 1%;
+    cursor: pointer;
+    margin: auto; 
+    position: relative;
+}
+#arrows {
+    left: 0;
+    right: 0; 
+    margin: auto; 
+    width: 50em; 
+    position: absolute; 
+    top: 5em; 
+    text-align: center;
+    margin-top: 15em;
+    width: 90%; 
+}
+#left {
+    width: 3em;
+    height: 2.5em;
+    left: 5%; 
+    float: left; 
+    border-radius: 50%;
+    font-weight: bold; 
+    cursor: pointer; 
+    background-color: white;
+    color: rgb(045, 050, 087); 
+    padding-top: .5em;
+}
+#right {
+    top: 25em; 
+    right: 5%; 
+    width: 3em;
+    height: 2.5em;
+    float: right; 
+    background: white;  
+    border-radius: 50%; 
+    font-weight: bold;
+    cursor: pointer;    
+    padding-top: .5em; 
+    color: rgb(045, 050, 087); 
+
+}
+#fadebg {
+    position: fixed;
+    top: 0; 
+    background-color: rgb(045, 050, 087); 
+    opacity: .60; 
+    width: 100%;
+    height: 100%; 
+    z-index: 18;
+    display: none; 
+}
+#close {
+    float: right; 
+    cursor: pointer;
+    background: paleturquoise; 
+    border-radius: 50%; 
+    width: 3em;
+    height: 3em; 
+    font-size: .3em;
+    text-align: center; 
+    position: absolute; 
+    top: 1%; 
+    right: 1%; 
+}
+#above {
+    position: fixed;
+    max-height: 70%;
+    z-index: 400; 
+    width: 70%; 
+    left: 0; 
+    right: 0; 
+    top: 4em; 
+    margin: auto; 
+    background: white; 
+    border-radius: 1em; 
+    padding: 2em; 
+    display: none; 
+    text-align: center; 
+}
+#desc {
+    display: inline; 
+}
+#switch {
+    max-height: 16em;;
+    max-width: 90%;
+    padding: 3%;  
+    left: 0;
+    right: 0; 
+    margin: auto; 
+    float: left; 
+}
+@media (max-width:1000px) {
+    body{ font-size: large;}   
+    }
+@media (max-width: 800px) {
+    #holder {width: 100%}
+    .gallery{width:60%; margin:auto; left:0; right:0;}
+    .gallery img {width: 40%;}
+    }
+@media (max-width: 480px) {
+    #holder {width: 100%}
+    .gallery img {width: 90%;}
+    #arrows {font-size: x-small; }
+    }
+    

@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<head>
+    <title>Coding</title>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="gal.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body> 
+<!-- navigation bar!-->
+    <div id="nav">
+        <ul>
+            <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about&#x25BE;</a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">about me</a></li>
+                        <li><a href="links.html">links&#x25B8;</a>
+                            <ul class="sidedrop">
+                                <li><a href=https://www.facebook.com/alyssa.lee.37669>facebook</a></li>
+                                <li><a href="https://twitter.com/lassylaa">twitter</a></li>
+                                <li><a href="https://plus.google.com/104544858090515809112">google+</a></li>
+                                <li><a href="links.html">more</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>            
+            <li style = "background-color: rgb(127, 213, 147);"> <a href = "art.html">gallery&#x25BE; </a>
+                <ul class="dropdown">
+                    <li><a href="art.html">art</a></li>
+                    <li style = "background-color: rgb(127, 213, 147);">coding</li>
+                </ul>
+            </li>
+            <li><a href="contact.html">contact</a></li> 
+        </ul>
+    </div>
+<!-- end of navgation bar -->
+<div id="center" style="font-size: 3em;">  Coding </div>
+    <!-- actual gallery -->
+    <div id="info" style = "height: 20em; "> 
+        <div id="holder">
+            <div class="gallery" id="g2015">
+                <h1>2015</h1>
+                <img src="ccpreview.png" onclick=show(this) alt = "<h1>Cabin Chaos</h1>This project was created during HackTJ 2.0. Cabin Chaos is an interactive story that allows the player to choose their own adventure through intelligent decision making. View the challengepost <a href='http://challengepost.com/software/cabin-chaos-9q001'>here</a>.">
+                <img src="rwgpreview.png" onclick=show(this) alt = "<h1>RSG+D</h1>This project was created in collaboration with Andrew Wang and Chris Niu during Pilot Philadelphia 2015. In 24 hours, we developed a web app that allows users to randomly generate sentences accompanied by a unique illustration. View the challengepost <a href='http://challengepost.com/software/rsg-d'>here</a>. ">
+            </div>
+            <div class="gallery" id="g2014" style="display:none">
+                <h1>2014</h1>
+                nothing to see here!
+            </div>
+        </div>    
+    </div>
+        <div id="arrows">
+            <div id="left" onclick=backward() style="display:none;"> &#171; </div>
+            <div id="right" onclick=forward()> &#187; </div>
+        </div>
+        <div id="fadebg" onclick=leave()> </div>
+        <div id="above">
+            <img src="birds-of-paradise.png" id="switch" alt = "the opened image">    
+            <div id="close" onclick=leave()>x</div>
+            <div id="desc"></div>
+        </div>
+<!-- Footer -->
+    <div id="footer">
+    <div id = "beans">   </div>
+        <div id = "footerinfo">
+        Alyssa Lee | 2015
+                <br><br>
+            <a href=https://www.facebook.com/alyssa.lee.37669><img src = "facebook.png" class = "soc"></a>
+            <a href="https://twitter.com/lassylaa"><img src = "twitter.png" class = "soc"></a>
+            <a href="https://plus.google.com/104544858090515809112"><img src = "gplus.png" class = "soc"></a>
+            <a href="http://challengepost.com/lassyla?ref_content=user-portfolio&amp;ref_feature=portfolio&amp;ref_medium=global-nav"><img src = "challengepost.png" class = "soc"> </a>
+    </div>
+    </div>
+    <!-- end of gallery -->
+<script>
+    var galleries = ["g2015", "g2014"];
+    var current = 0
+    //forward sends the slide back one year, backward sends the slide up one year
+    function forward() {
+        
+        var c = document.getElementById(galleries[current]);
+        $(c).fadeOut(500); 
+        current++;
+        c = document.getElementById(galleries[current]); 
+        $(c).fadeIn(500);  
+        if(current === galleries.length - 1){
+            $("#right").attr("onclick", null); 
+            $("#right").css("display", "none");           
+        }
+        if(current === 1){
+            $("#left").attr("onclick", "backward()"); 
+            $("#left").css("display", "block");           
+        }
+    }
+    function backward() {
+        var c = document.getElementById(galleries[current]);
+        $(c).fadeOut(200); 
+        current--;
+        c = document.getElementById(galleries[current]); 
+        $(c).fadeIn(200); 
+        if(current === 0){
+            $("#left").attr("onclick", null); 
+            $("#left").css("display", "none");            
+        } 
+        if(current === galleries.length - 2){
+            $("#right").attr("onclick", "forward()"); 
+            $("#right").css("display", "block");           
+        }
+    }
+    function leave() {
+        $("#above").fadeOut(200); 
+        $("#fadebg").fadeOut(200);         
+    }
+    function show(a) {
+        $("#switch").attr("src", a.src); 
+        document.getElementById("desc").innerHTML = a.alt; 
+        $("#fadebg").fadeIn(200); 
+        $("#above").fadeIn(200); 
+    }
+</script>
+</body>
+</html>
