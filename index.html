@@ -1,16 +1,11 @@
 <!DOCTYPE html> 
 <html>
-<!--
-top left logo
-writing in gallery
 
-SASS, LESS (cool topic to research)
--->
 <head>
     <title>Home</title>
     <meta charset = "utf-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="circle.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/circle.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
@@ -19,23 +14,23 @@ SASS, LESS (cool topic to research)
     <div id="nav">
         <ul>
             <li style = "background-color: rgb(127, 213, 147);">home</li>
-                <li><a href="about.html">about&#x25BE;</a>
+                <li><a href="pages/about.html">about&#x25BE;</a>
                     <ul class="dropdown">
-                        <li><a href="about.html">about me</a></li>
-                        <li><a href="links.html">links&#x25B8;</a>
+                        <li><a href="pages/about.html">about me</a></li>
+                        <li><a href="pages/links.html">links&#x25B8;</a>
                             <ul class="sidedrop">
                                 <li><a href=https://www.facebook.com/alyssa.lee.37669>facebook</a></li>
                                 <li><a href="https://twitter.com/lassylaa">twitter</a></li>
                                 <li><a href="https://plus.google.com/104544858090515809112">google+</a></li>
-                                <li><a href="links.html">more</a></li>
+                                <li><a href="pages/links.html">more</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-            <li> <a href = "art.html">gallery&#x25BE; </a>
+            <li> <a href = "pages/art.html">gallery&#x25BE; </a>
                 <ul class="dropdown">
-                    <li><a href="art.html">art</a></li>
-                    <li><a href="coding.html">coding</a></li>
+                    <li><a href="pages/art.html">art</a></li>
+                    <li><a href="pages/coding.html">coding</a></li>
                 </ul>
             </li>
             <li><a href="contact.html">contact</a></li> 
@@ -73,13 +68,14 @@ SASS, LESS (cool topic to research)
     <div id="info"> 
         <div class="box" id = "welc">
          <h1> Welcome! </h1>
-            My name is Alyssa Lee. I am currently a student at Thomas Jefferson High School for Science and Technology in Virginia. My goal is to learn web design and development. Check out my galleries to view previous projects that I have done. Thank you for visiting, and enjoy your stay!
+            My name is Alyssa Lee. I am currently a student at Thomas Jefferson High School for Science and Technology in Virginia. My two favorite hobbies are coding and art. Check out my galleries to view previous projects that I have done. Thank you for visiting, and enjoy your stay!
         </div>
         <div class="box" style="background: none; height: 23em; padding: 0">      
                      <!-- Video Box --> 
             <div class="box" id = "vid">
                     <h1>Video</h1>
-                    <iframe style="margin:auto; width:100%; height: 70%;" src="https://www.youtube.com/embed/7zm_My8GvNA" allowfullscreen> your browser does not support this video!</iframe> <!-- video, displays text if the browser does not support --> 
+                    <iframe style="margin:auto; width:100%; height: 70%;" src="https://www.youtube.com/embed/PCqPjs7nxUY" allowfullscreen> your browser does not support this video!</iframe> <!-- video, displays text if the browser does not support --> 
+                Check out my <a href="https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA" >youtube channel</a> for digital speed paintings! 
             </div>   
                 <!-- Twitter box -->                 
             <div class="box" id="twit">
@@ -97,16 +93,16 @@ SASS, LESS (cool topic to research)
         <div id = "footerinfo">
         Alyssa Lee | 2015
                 <br><br>
-            <a href=https://www.facebook.com/alyssa.lee.37669><img src = "facebook.png" class = "soc"></a>
-            <a href="https://twitter.com/lassylaa"><img src = "twitter.png" class = "soc"></a>
-            <a href="https://plus.google.com/104544858090515809112"><img src = "gplus.png" class = "soc"></a>
-            <a href="http://challengepost.com/lassyla?ref_content=user-portfolio&amp;ref_feature=portfolio&amp;ref_medium=global-nav"><img src = "challengepost.png" class = "soc"> </a>
+            <a href=https://www.facebook.com/alyssa.lee.37669><img src = "art/facebook.png" class = "soc"></a>
+            <a href="https://twitter.com/lassylaa"><img src = "art/twitter.png" class = "soc"></a>
+            <a href="https://plus.google.com/104544858090515809112"><img src = "art/gplus.png" class = "soc"></a>
+            <a href="http://challengepost.com/lassyla?ref_content=user-portfolio&amp;ref_feature=portfolio&amp;ref_medium=global-nav"><img src = "art/challengepost.png" class = "soc"> </a>
     </div>
     </div>
 <script>
     var temp = 5;
     var images = ["art/about.jpg", "art/coding.png", "art/RAD_2020.JPG", "art/Whale.jpg", "art/contact.jpg"];
-    var link = ["about.html", "coding.html", "art.html", "links.html", "contact.html"];
+    var link = ["pages/about.html", "pages/coding.html", "pages/art.html", "pages/links.html", "pages/contact.html"];
     var descs = ["about", "coding", "art", "links", "contact"];
     var repeat;
     //fades to slide a

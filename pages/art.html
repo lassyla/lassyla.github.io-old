@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<head>
+    <title>Art </title>        
+    <meta charset = "utf-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/gal.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body> 
+<!-- navigation bar!-->
+    <div id="nav">
+        <ul>
+            <li><a href="../index.html">home</a></li>
+                <li><a href="about.html">about&#x25BE;</a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">about me</a></li>
+                        <li><a href="links.html">links&#x25B8;</a>
+                            <ul class="sidedrop">
+                                <li><a href=https://www.facebook.com/alyssa.lee.37669>facebook</a></li>
+                                <li><a href="https://twitter.com/lassylaa">twitter</a></li>
+                                <li><a href="https://plus.google.com/104544858090515809112">google+</a></li>
+                                <li><a href="links.html">more</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>            
+            <li style = "background-color: rgb(127, 213, 147);"> <a href = "art.html">gallery&#x25BE; </a>
+                <ul class="dropdown">
+                    <li style = "background-color: rgb(127, 213, 147);">art</li>
+                    <li><a href="coding.html">coding</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">contact</a></li> 
+        </ul>
+    </div>
+<!-- end of navgation bar -->
+<div id="center" style="font-size: 3em;">  Art </div>
+    <!-- actual gallery -->
+    <div id="info"> 
+        <div id="holder">
+            <div class="gallery" id="g2016">
+                <h1>2016</h1>
+                <img src="../art/peep.gif" onclick=show(this) alt="<h1>Peep</h1><br>3D model made with Blender">
+                <img src="../art/forest_monster.png" onclick=show(this) alt="<h1>Your Friends/h1><br>Digital art">
+                <img src="../art/codasheet.png" onclick=show(this) alt="<h1>Character Design</h1><br>Digital art">
+                <img src="../art/strawberrycake.png" onclick=show(this) alt="<h1>Cake Roll</h1><br>Digital art">
+                <img src="../art/tart.png" onclick=show(this) alt="<h1>Tart</h1><br>Digital art">
+                <img src="../art/sundae.png" onclick=show(this) alt="<h1>Sundae</h1><br>Digital art">
+                <img src="../art/portrait.png" onclick=show(this) alt="<h1>Untitled</h1><br>Digital art">
+
+            </div>
+            <div class="gallery" id="g2015" style="display:none">
+                <h1>2015</h1>
+                <img src="../art/RAD_2020.JPG" onclick=show(this) alt="<h1>Jellyfish In Glass</h1><br>Acrylic on canvas">
+                <img src="../art/RAD_2039.JPG" onclick=show(this) alt="<h1>Eye Candy</h1><br>Mixed Media">
+                <img src="../art/RAD_2052.JPG" onclick=show(this) alt="<h1>Fruits</h1><br>Watercolor">
+                <img src="../art/rwg.png" onclick=show(this) alt="<h1>Butter Cabinet Playground</h1><br>Randomly generated words. Digital painting">
+                <img src="../art/bird.jpg" onclick=show(this) alt="<h1>Bird</h1><br>Marker">
+            </div>
+            <div class="gallery" id="g2014" style="display:none">
+                <h1>2014</h1>
+                <img src="../art/RAD_2046.JPG" onclick=show(this) alt="<h1>Untitled<h1><br>Mixed Media">
+                <img src="../art/ThreeColor.jpg" onclick=show(this) alt = "<h1>Untitled</h1><br>Gel Pen">
+                <img src="../art/Whale.jpg" onclick=show(this) alt="<h1>Untitled</h1><br>Marker">
+                <img src="../art/Robots.jpg" onclick=show(this) alt="<h1>Robots</h1><br>Magazine cutouts">          
+                <img src="../art/snailroad.jpg" onclick=show(this) alt="<h1>Snailroad</h1><br>Acrylic">
+                <img src="../art/Spider.jpg" onclick=show(this) alt="<h1>Untitled<h1><br>Acrylic">     
+            </div>
+            <div class="gallery" id="g2013" style="display:none">
+                <h1>2013</h1>
+                <img src="../art/hel%20lo%20friends%20.png" onclick=show(this) alt = "...">
+            </div>
+        </div>    
+    </div>
+        <div id="arrows">
+            <div id="left" onclick=backward() style="display:none;"> &#171; </div>
+            <div id="right" onclick=forward()> &#187; </div>
+        </div>
+        <div id="fadebg" onclick=leave()> </div>
+        <div id="above">
+            <img src="birds-of-paradise.png" id="switch" alt = "the opened image">    
+            <div id="close" onclick=leave()>x</div>
+            <div id="desc"></div>
+        </div>
+<!-- Footer -->
+    <div id="footer">
+    <div id = "beans">   </div>
+        <div id = "footerinfo">
+        Alyssa Lee | 2015
+                <br><br>
+            <a href=https://www.facebook.com/alyssa.lee.37669><img src = "../art/facebook.png" class = "soc"></a>
+            <a href="https://twitter.com/lassylaa"><img src = "../art/twitter.png" class = "soc"></a>
+            <a href="https://plus.google.com/104544858090515809112"><img src = "../art/gplus.png" class = "soc"></a>
+            <a href="http://challengepost.com/lassyla?ref_content=user-portfolio&amp;ref_feature=portfolio&amp;ref_medium=global-nav"><img src = "../art/challengepost.png" class = "soc"> </a>
+    </div>
+    </div>
+    <!-- end of gallery --> 
+<script>
+    var galleries = ["g2016", "g2015", "g2014", "g2013"];
+    var current = 0
+    //forward sends the slide back one year, backward sends the slide up one year
+    function forward() {
+        
+        var c = document.getElementById(galleries[current]);
+        $(c).fadeOut(500); 
+        current++;
+        c = document.getElementById(galleries[current]); 
+        $(c).fadeIn(500);  
+        if(current === galleries.length - 1){
+            $("#right").attr("onclick", null); 
+            $("#right").css("display", "none");           
+        }
+        if(current === 1){
+            $("#left").attr("onclick", "backward()"); 
+            $("#left").css("display", "block");           
+        }
+    }
+    function backward() {
+        var c = document.getElementById(galleries[current]);
+        $(c).fadeOut(200); 
+        current--;
+        c = document.getElementById(galleries[current]); 
+        $(c).fadeIn(200); 
+        if(current === 0){
+            $("#left").attr("onclick", null); 
+            $("#left").css("display", "none");            
+        } 
+        if(current === galleries.length - 2){
+            $("#right").attr("onclick", "forward()"); 
+            $("#right").css("display", "block");           
+        }
+    }
+    function leave() {
+        $("#above").fadeOut(200); 
+        $("#fadebg").fadeOut(200);         
+    }
+    function show(a) {
+        $("#switch").attr("src", a.src); 
+        document.getElementById("desc").innerHTML = a.alt; 
+        $("#fadebg").fadeIn(200); 
+        $("#above").fadeIn(200); 
+    }
+</script>
+</body>
+</html>
