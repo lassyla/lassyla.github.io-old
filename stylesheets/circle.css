@@ -86,8 +86,7 @@
 #screen {
     background-color: white; 
     transition: .5s; 
-/*    opacity: .4;*/
-    opacity: 
+    opacity: .2;
     z-index: 3; 
     top:3em; 
 }
