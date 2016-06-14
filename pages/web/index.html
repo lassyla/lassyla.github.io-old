@@ -51,7 +51,7 @@ var pages = ["assign0", "jschallenges", "assign1", "assign2", "assign3", "assign
 var descriptions = ["the very first assignment", "learning javascript", "a quiz about colors", "a quiz about fruits", "DOM tree navigation", "HTML Forms", "add numbers with PHP", "cheat in scrabble", "learning canvas", "records when page was last visited", "uses the youtube API", "final project"]; 
 var repeat;
 var rectanglevar = 12;
-var clicks = 0; 
+var clicks = -1; 
 
 function setup(){
     goto(0);
@@ -82,7 +82,7 @@ function goto(a) {
     	clicks += 1; 
     else
     	clicks = 0; 
-    if(clicks > 2)
+    if(clicks > 1)
     	window.location.href=pages[currentIndex];
     if (current=="")
         current = "empty";
