@@ -1,0 +1,4 @@
+AuthUserFile /afs/csl.tjhsst.edu/students/2017/2017alee/web-docs/.htpasswd
+AuthName "Authentication Required"
+AuthType Basic
+require valid-user
