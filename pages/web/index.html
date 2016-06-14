@@ -46,15 +46,15 @@
 </html> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-var currentIndex; 
+var currentIndex = 0; 
 var pages = ["assign0", "jschallenges", "assign1", "assign2", "assign3", "assign4", "phppractice", "assign5", "canvaspractice", "increment", "api", "final"]
 var descriptions = ["the very first assignment", "learning javascript", "a quiz about colors", "a quiz about fruits", "DOM tree navigation", "HTML Forms", "add numbers with PHP", "cheat in scrabble", "learning canvas", "records when page was last visited", "uses the youtube API", "final project"]; 
 var repeat;
 var rectanglevar = 12;
+var clicks = 0; 
 
 function setup(){
     goto(0);
-    currentIndex = 0; 
     document.onkeydown = function(e){
         switch(e.keyCode){
                 case(38):
@@ -79,6 +79,10 @@ function setup(){
 function goto(a) {
     var current = pages[currentIndex]
     if(currentIndex == a)
+    	clicks += 1; 
+    else
+    	clicks = 0; 
+    if(clicks > 2)
     	window.location.href=pages[currentIndex];
     if (current=="")
         current = "empty";
