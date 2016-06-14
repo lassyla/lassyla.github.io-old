@@ -77,7 +77,8 @@ function setup(){
 }
 function goto(a) {
     var current = pages[currentIndex]
-
+    if(curentIndex == a)
+    	window.location.href=pages[currentIndex];
     if (current=="")
         current = "empty";
     document.getElementById(current).style.border = "1px solid white";
