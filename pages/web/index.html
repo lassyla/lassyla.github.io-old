@@ -53,7 +53,8 @@ var repeat;
 var rectanglevar = 12;
 
 function setup(){
-    goto(currentIndex)
+    goto(0);
+    currentIndex = 0; 
     document.onkeydown = function(e){
         switch(e.keyCode){
                 case(38):
