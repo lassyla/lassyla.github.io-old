@@ -1,0 +1,55 @@
+<html> 
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<title>Quiz 9/21/2015</title> 
+</head> 
+<body>
+	<h1>Period 3</h1>
+	<h1> Alyssa Lee</h1> 
+	<table> 
+		<tr>
+			<td> GPA: </td>
+			<td id="gpa"> 4 </td> 
+		</tr>
+		<tr>
+			<td> Quarter 1: </td>
+			<td>
+				<select id="q1" onchange="calcGPA()">
+					<option value="4">A</option>
+					<option value="3.7">A-</option>
+					<option value="3.3">B+</option>
+					<option value="3">B</option>
+					<option value="2.3">C+</option>
+					<option value="2">C</option>
+					<option value="1.7">C-</option>
+					<option value="1.3">D+</option>
+					<option value="1">D</option>
+					<option value="0">F</option>
+				</select>  
+			</td> 
+		</tr>
+		<tr>
+			<td> Quarter 2: </td>
+			<td>
+				<select id="q2" onchange="calcGPA()">
+					<option value="4">A</option>
+					<option value="3.7">A-</option>
+					<option value="3.3">B+</option>
+					<option value="3">B</option>
+					<option value="2.3">C+</option>
+					<option value="2">C</option>
+					<option value="1.7">C-</option>
+					<option value="1.3">D+</option>
+					<option value="1">D</option>
+					<option value="0">F</option>
+				</select>  
+			</td> 
+		</tr>
+</body>
+</html> 
+<script>
+function calcGPA(){
+	var gpa = (parseFloat(document.getElementById("q1").value) + parseInt(document.getElementById("q2").value))/2.00;
+	document.getElementById("gpa").innerHTML = gpa;
+}
+</script>

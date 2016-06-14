@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<link rel="stylesheet" type="text/css" href="form.css"/>
+	<title>Form practice</title> 
+</head> 
+<body>
+	<a href="../index.html" class="clicker">return to index</a>
+	<h1 style="color:black" id="hello">Hello customer!</h1> 
+	<div id="content">
+	<form autocomplete="on" action="form.php" method="post">
+		<div class="col" id="d1">
+			Name (first and last): <br>
+			<input type="text" id="name" name="name" placeholder="Alyssa Lee" pattern="^[A-Z]['\ \-\.A-Za-z]+\s['\ \-\.A-Za-z]+" onchange="greet()" autofocus required > <br>
+			Birthdate: <br>
+			<input type="text" name="birth" placeholder="mm/dd/yyyy"  required> <br> <!-- pattern="^(([0]\d)|(\d)|(1[012]))/(([01]\d)|([3][01])|[0-9])/((19\d{2})|(200\d))"-->
+			State: <br>
+			<select name="state" required>
+				<option> </option> 
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AZ">AZ</option>
+				<option value="AR">AR</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DE">DE</option>
+				<option value="DC">DC</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="IA">IA</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="ME">ME</option>
+				<option value="MD">MD</option>
+				<option value="MA">MA</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MS">MS</option>
+				<option value="MO">MO</option>
+				<option value="MT">MT</option>
+				<option value="NE">NE</option>
+				<option value="NV">NV</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NY">NY</option>
+				<option value="NC">NC</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WV">WV</option>
+				<option value="WI">WI</option>
+				<option value="WY">WY</option>
+			</select><br>
+			City: <br>
+			<input type="text" name="city" required pattern="[A-Z].*"><br>
+			Zip code: <br>
+			<input type="text" name="zip" pattern="\d{5}" required><br>
+
+			Choose: <br>
+			<input type="radio" name="radio" value="" onclick="setList()" checked>Listview
+			<br>
+			<input type="radio" name="radio" value="" onclick="setDropdown()">Dropdown
+			<br>
+		</div>
+		<div class="col" id="d2">
+			<select name="s1" id="s1" onchange="changes2()" required placeholder="Choose a category">
+				<option value="no" disabled selected>Choose a category</option>
+				<option value="hd">Hot drinks</option>
+				<option value="cd">Cold drinks</option>
+				<option value="pastry">Pastry</option>
+			</select>
+		</div>
+		<div class="col" id="d3">
+ 			<select name="s2" id="s2" onclick="setimg()" disabled required>
+			</select>
+			<img src="" id="choice"> 
+			<br>
+		</div>
+		<div class="col" id="submit">
+ 			<input type="submit" value="Submit">
+		</div>
+	</form>
+</div>
+</body>
+</html> 
+
+<script>
+var foods = {}
+foods["choose"] = [];
+foods["hd"] = ["Tea", "Coffee", "Hot chocolate"];
+foods["hdImages"]  = ["tea.png", "coffee.png", "hotchocolate.png"];
+foods["cd"] = ["Water", "Ice tea", "Milk", "Juice"];
+foods["cdImages"]  = ["water.png", "icetea.png", "milk.png", "juice.png"];
+foods["pastry"] = ["Cake", "Muffin", "Pie", "Donut", "Eclair", "Tart", "Cookie"];
+foods["pastryImages"]  = ["cake.png", "muffin.png", "pie.png", "donut.png", "eclair.png", "tart.png", "cookie.png"];
+foodImages = ["", "", "", ""];
+var course; 
+changes2(); 
+var dropdown; 
+function setDropdown(){
+	dropdown = true;
+	document.getElementById("s1").size = 4;
+	course = s1.options[s1.selectedIndex].value;
+	document.getElementById("s2").size = foods[course].length;
+}
+function setList(){
+	dropdown = false;
+	document.getElementById("s1").size = 1;
+	document.getElementById("s2").size = 1;
+}
+function setimg(){
+	course = s1.options[s1.selectedIndex].value + "";
+	document.getElementById("choice").src = foods[course + "Images"][s2.selectedIndex]; 
+}
+function changes2(){
+	course = s1.options[s1.selectedIndex].value + "";
+	s2.disabled = false;
+	if(course=="choose"){
+		s2.disabled = true;
+	}
+	while (s2.options.length) {
+        s2.remove(0);
+    }
+	for(var k=0; k<foods[course].length; k++){
+		var opt = new Option(foods[course][k]);
+		s2.options.add(opt);
+	}
+	if(dropdown){
+		var x = document.getElementById("s2").options.length;
+		document.getElementById("s2").size = x;
+	}
+	document.getElementById("choice").src = foods[course + "Images"][0]; 
+}
+function greet(){
+	var name = document.getElementById("name").value; 
+	if(name.trim() == ""){
+		document.getElementById("hello").innerHTML = "Hello customer!"; 
+	}
+	else{
+		console.log(name);
+		document.getElementById("hello").innerHTML = "Hello " + name + "!" ; 
+	}
+}
+
+</script> 

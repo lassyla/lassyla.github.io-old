@@ -1,0 +1,51 @@
+#content{
+	width: 66em;
+	margin: auto;
+	text-align: center;
+}
+body{
+	background: aliceblue;
+	
+}
+.col{
+	padding: 2em; 
+	box-shadow: 2px 2px 2px #aaaaaa;
+	display: inline-block;
+	width: 12em;
+	background: white;
+	height: 25em;
+	border-radius: 1em;
+	text-align: left;
+}
+input, select{
+	margin-bottom: 1.5em;
+}
+h1{
+	text-shadow: 2px 2px 2px #aaaaaa;
+}
+#d1{
+	float: left;
+	margin: 3em;
+}
+#d2{
+	margin: 3em; 
+}
+#d3{
+	float: right;
+	margin: 3em;
+}
+
+#s1, #s2{
+	width: 100%;
+}
+#submit{
+	margin: auto; 
+	height: 1em;
+	text-align: center;
+	left: 0; 
+	right: 0;
+}
+#choice{
+	margin-bottom: 0;
+	position: relative;
+}

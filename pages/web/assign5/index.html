@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+
+<html> 
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<link rel="stylesheet" type="text/css" href="form.css"/>
+	<title>Scrabble Searcher</title> 
+</head> 
+<body>
+	<div id="top">
+	<a href="../index.html" class="clicker">return to index</a>
+		<h1>Scrabble Searcher</h1> 
+		<form onsubmit="showWords(); return false;">
+			<div id="box">
+				<h3>Letters in rack:</h3> 
+				<input type="text" id="rack" required pattern="^\w*$" size="8" maxlength="8">
+			</div> 
+			<div id="box"> 
+				<h3>Connecting Letter: </h3>
+				<input type="text" id="connect" maxlength="1" size="1'" pattern="\w">
+			</div> <br>
+				<input id="submit" type="submit" value="Get Words">
+		</form>
+		<br> 
+	</div> 
+	<h2> Results: </h2> 
+	<div id="results"></div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+var pointVals = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
+function showWords(){
+	var rack = $("#rack").val().toLowerCase().split("").sort().join("");
+	var connect = $("#connect").val().toLowerCase();
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+			document.getElementById("results").innerHTML = "waiting...";
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			results =  $.parseJSON(xmlhttp.responseText);
+			displayResults(results);
+		}
+	}
+	var args = {
+		rack:rack, 
+		connect:connect
+	};
+	xmlhttp.open("GET", "scrabble.php?"+dw_encodeVars(args), true);
+	xmlhttp.send();
+}
+
+function displayResults(a){
+	results =document.getElementById("results") 
+	results.innerHTML = ""; 
+	console.log(typeof(a)); 
+	for(result in a){
+		var text = document.createTextNode(a[result]); 
+		var word = document.createElement("div"); 
+		word.id = "word"; 
+		word.appendChild(text); 
+		var score = document.createTextNode(calcScore(a[result])); 
+		var scoreBox = document.createElement("div"); 
+		scoreBox.id = "score"; 
+		scoreBox.appendChild(score); 
+		var node = document.createElement("div"); 
+		node.id = "wordBox"; 
+		node.style.background = getColor(calcScore(a[result])); 
+		node.appendChild(scoreBox); 
+		node.appendChild(word); 
+		$(node).hide().appendTo(results).fadeIn(); 
+
+	}
+}
+
+
+function dw_encodeVars(params) {
+	var str = '';
+	for (var i in params ) {
+		str += encodeURIComponent(i) + '=' + encodeURIComponent( params[i] ) + '&';
+	}
+	return str.slice(0, -1);
+}
+
+function calcScore(word) {
+	score = 0; 
+	for(var letter = 0; letter<word.length; letter++){
+		score += pointVals[word[letter]]; 
+	}
+	return score + "";
+}
+
+function getColor(score){
+	//r = 250 - score * 50
+	//g = score * 10 + 100
+	//r = Math.floor(Math.sin(.1*score + 0) * 127 + 128);
+	//r = r%250; 
+	r = 250 - Math.pow(score, 2); 
+	g = 250
+	return "rgb(" + r +", " + g + ", 150)";
+
+}
+</script> 

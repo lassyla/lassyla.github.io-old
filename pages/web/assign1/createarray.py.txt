@@ -1,0 +1,10 @@
+names = []
+hex = []
+data = open("colors.txt", "r")
+for line in data:
+   sp = line.split("\t")
+   names.append(sp[0])
+   hex.append("#"+sp[1])
+print names
+print hex
+     

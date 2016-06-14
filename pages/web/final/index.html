@@ -1,0 +1,79 @@
+<html> 
+<head> 
+	<title>Final Project</title> 
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head> 
+<body >
+    <div id="clouds"> </div>
+    <div id="bg">
+        <div id="bgtop"></div>
+        <div id="bgbottom"></div>
+    </div>
+    <div id="clearbox"></div>
+    <h1 style="top: 35%">MESSAGE IN A BOTTLE</h1>
+    <div id="buttons">     
+        <a class="button" onclick="goAbout()">about</a>
+        <a class="button" onclick="goCreate()">create page</a>
+        <a class="button" onclick="switchRoom()" id="switchbutton"> input room code</a>
+    </div>
+
+    <div id="switchRoom"> 
+        <div class="screen" id="messagescreen" onclick="leave()"></div> 
+        <div class="msg" style="max-height: 220px;">
+            <h2>room code:</h2>
+            <input type="text" class="input" id="urlinput">
+            <button onclick="go()"> go! </button>
+            <div id="close" onclick="leave()"> x </div> 
+        </div>
+    </div>
+    <div id="createRoom">
+        <div class="screen" id="createscreen" onclick="leave()"></div> 
+        <form action="form.php" method="post" class="msg" autocomplete="off">
+        <h2 title="provide a brief description of your page">Title:</h2>
+            (provide a brief description of your page)
+        <input type="text" name="desc" required class="input" autocomplete="off"> <br>
+        <h2 title="set a password for moderation">Admin password: </h2>
+            (you'll need this to moderate content)
+        <input type="password" name="pword" required class="input" autocomplete="off" > <br>
+        <input type="submit" value="Submit" class="button">  
+        <div id="close" onclick="leave()"> x </div> 
+    </form>
+    </div>
+    <div id="about"> 
+        <div class="screen" id="aboutscreen" onclick="leave()"></div> 
+        <div class="msg" style="max-height: 220px;">
+            <h2>About</h2>
+            This project is designed for people to give and receive anonymous messages. To start, create a room or enter your friend's room using its unique room code. Create and view messages, but remember that they will disappear after being viewed once!   
+            <div id="close" onclick="leave()"> x </div> 
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    document.getElementById('urlinput').onkeydown = function(e){
+       if(e.keyCode == 13){
+         go();
+       }
+    };
+    function leave(){
+        document.getElementById("switchRoom").style.visibility = "hidden";  
+        document.getElementById("createRoom").style.visibility = "hidden";  
+        document.getElementById("about").style.visibility = "hidden";  
+    }
+    function switchRoom(){
+        document.getElementById("switchRoom").style.visibility = "visible";  
+    }
+
+    function goAbout(){
+        document.getElementById("about").style.visibility = "visible";  
+    }
+    function goCreate(){
+        document.getElementById("createRoom").style.visibility = "visible";  
+    }
+    function go(){
+        window.location = "roomtemp.html#" + document.getElementById("urlinput").value.toLowerCase();; 
+    }
+</script> 
+

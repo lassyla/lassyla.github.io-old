@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <title>Google Maps API Assignment</title> 
+</head> 
+<body>
+    <a href="../index.html" class="clicker">return to index</a>
+    <div id="map" style="width: 800px; height: 800px; margin: auto; top: 100px; "></div>
+    <button id="switch" onclick="switchStyle()" style="margin: auto; display: block; top: 120px;; position:relative; font-size: 30px;">Change map style</button> 
+    <script type="text/javascript">
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 38.818454, lng: -77.168623},
+            zoom: 16
+          });
+        }
+    </script>
+    <script>
+        function switchStyle(){
+          var styles = [
+          {
+            stylers: [
+              { hue:'#'+Math.floor(Math.random()*16777215).toString(16)},
+              { lightness:  Math.floor(Math.random()*40) - 20  },
+              { saturation: Math.floor(Math.random()*40) - 20 }
+            ]
+          },{
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [
+              { hue:'#'+Math.floor(Math.random()*16777215).toString(16)},
+              { lightness:  Math.floor(Math.random()*40) - 20  },
+              { saturation: Math.floor(Math.random()*40) - 20 },
+              { visibility: "simplified" }
+            ]
+          },{
+            featureType: "road",
+            elementType: "labels",
+            stylers: [
+              { hue:'#'+Math.floor(Math.random()*16777215).toString(16)},
+              { lightness:  Math.floor(Math.random()*40) - 20  },
+              { saturation: Math.floor(Math.random()*40) - 20 },
+              { visibility: "on" }
+            ]
+          }
+        ];
+          map.setOptions({styles: styles});
+        }
+
+    </script> 
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr0F5hKtFa6eq1MgrkfPbRVVEdsaHUSts&callback=initMap">
+    </script>
+  </body>
+</html>

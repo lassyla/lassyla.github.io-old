@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<link rel="stylesheet" type="text/css" href="quizgame.css"/>
+		<script type="text/javascript" src="quizgame.js"></script>
+		<title>Assignment 2</title> 
+	</head> 
+	<body>
+		<div id="startscreen">
+			<div id="start" onclick="start()"> Start the quiz! </div>
+		</div>
+		<a href="../index.html" class="clicker">return to index</a>
+		<h1 id="title">Quiz Game: Fruit Trivia</h1>
+		<div id="top">
+			<div id = "center"> 
+				<div id="start" onclick="start()"> Restart </div>
+				<div id="start" onclick="showAns()"> Give Up </div>
+				<a href="../index.html"><div id="start"> Quit </div></a>
+			</div>
+			<h2 id = "question"> the question goes here! here? </h2>
+			<br>
+			<input id="input" type="text" oninput="guess()" style="margin: 5em;">
+			<div id="timer">
+			    <h2 id="counter">Time Left: 00:00 </h2>
+			</div>
+		</div>
+		<br>
+		<br>
+	    <table id="answers">
+	    	<tr id="q1">
+	    		<td>Question</td>
+	    	</tr>
+	    	<tr id="a1">
+	    		<td>Answer </td>
+	    	</tr>
+	    	<tr id="q2">
+	    		<td>Question</td>
+	    	</tr>
+	    	<tr id="a2">
+	   	    	<td>Answer </td>	    		
+	    	</tr>
+	    <table>
+        <div id="start" onclick="skip()" style="margin: auto; left:41%; position:relative; top:3em;"> Skip question </div>
+        <p style="position: absolute; bottom:0; color: white; font-size: .8em; "> facts from http://www.fruitexpert.co.uk/fun-fruit-quiz.html </p>
+	</body>
+</html>
+        

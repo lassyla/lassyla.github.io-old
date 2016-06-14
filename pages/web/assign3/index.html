@@ -1,0 +1,116 @@
+<!--
+•	all elements with borders
+•	several nested children 
+•	several siblings
+•	at least one of each of the following:
+•	div, p, ul, li, span, script	
+-->
+
+<!DOCTYPE html>
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="domnav.css"/>
+		<title>Assignment 3</title> 
+	</head> 
+	<body>
+		<a href="../index.html" class="clicker">return to index</a>
+		<h1 id="title">Dom Tree Navigation</h1>
+		<div onclick="clicked()">
+			<div id="div1"> Sorbet
+				<p>Sorbet: a dessert consisting of frozen fruit juice or flavored water and sugar. </p>
+				<ul id="div2"> Rasbperry
+					<li>Raspberries </li>
+					<li>Sugar </li>
+					<li>Water </li>
+				</ul>
+				<ul id="div2"> Peach
+					<li>Peaches </li>
+					<li>Sugar </li>
+					<li>Lemon </li>
+					<li>Salt </li>
+				</ul>
+			</div>
+			<div id="div1"> Ice Cream
+				<p>Ice Cream: a soft frozen food made with sweetened and flavored milk fat. </p>
+				<ul id="div2"> Chocolate*
+					<li>Cream </li>
+					<li>Sugar </li>
+					<li>Chocolate </li>
+					<li>Salt </li>
+				</ul>
+				<ul id="div2"> Strawberry*
+					<li>Strawberries </li>
+					<li>Sugar </li>
+					<li>Cream </li>
+					<li>Milk </li> 
+					</ul>
+				</ul>
+			</div>
+			<div id="div1"> Gelato
+				<p>Gelato: Italian or Italian-style ice cream. </p>
+				<ul id="div2"> Vanilla*
+					<li>Salt </li>
+					<li>Sugar </li>
+					<li>Vanilla </li>
+					<li>Cream </li>
+				</ul>
+				<ul id="div2"> Pistachio*
+					<li>Pistachios </li>
+					<li>Sugar </li>
+					<li>Cream </li>
+				</ul>
+			</div>	
+			<span> *contains milk </span>
+		</div>
+</html>
+<script>
+function clicked(){
+	target = event.target;
+	if(target.childElementCount != 0 ){
+		// var save = target.firstElementChild.style.background + "";
+		// target.firstElementChild.style.background = "black"; 
+		// setTimeout(function(){
+		// 	target.firstElementChild.style.background = save; 
+		// }, 100);
+		fadeOut(target.firstElementChild);
+	}
+	else if (target.nextElementSibling != null){
+		// var save = target.nextElementSibling.style.background + "";
+		// target.nextElementSibling.style.background = "black"; 
+		// setTimeout(function(){
+		// 	target.nextElementSibling.style.background = save; 
+		// }, 100);
+		fadeOut(target.nextElementSibling);
+	}
+	else{
+		current = target.parentElement;
+		while(current.nextElementSibling == null){
+			current = current.parentElement;
+		}
+		// var save = current.nextElementSibling.style.background + "";
+		// current.nextElementSibling.style.background = "black"; 
+		// setTimeout(function(){
+		// 	current.nextElementSibling.style.background = save; 
+		// }, 100);
+		fadeOut(current.nextElementSibling);
+	}
+}
+op = 1.0
+function fadeOut(element){
+	element.style.opacity = op; 
+	if(op>0){
+		op -= .1;
+		setTimeout(function(){fadeOut(element)}, 20);
+	}
+	else
+		fadeIn(element);
+}
+function fadeIn(element){
+	element.style.opacity = op; 
+	if(op<1){
+		op += .1;
+		setTimeout(function(){fadeIn(element)}, 20);
+	}
+}
+</script>
+        

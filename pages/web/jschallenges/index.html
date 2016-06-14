@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<title>JS Challenges</title> 
+</head> 
+<body>
+	<a href="../index.html" class="clicker">return to index</a>
+	<h1>javascript challenges</h1>
+	<div id="counter" style="margin: 4em;"> button clicked 0 times</div>
+    <div id="multiply" class="box" style="height: auto; background-color: #E2688D; cursor:pointer; margin: 3em;" onclick="mult()"> 1654 * 723 = ? </div> 
+    <br>
+    <input id="enter" type="text" oninput="rewrite()" style="margin: 5em;">
+    <br>
+    <div id="typed"> </div>
+</body>
+</html> 
+<script> 
+	alert("17+ 12 = 29");
+	var times = 0; 
+	function mult() {
+		times++; 
+		document.getElementById("multiply").innerHTML = "" + 1654 * 723; 
+		document.getElementById("multiply").onclick = back;	
+		document.getElementById("counter").innerHTML = "button clicked " + times + " times"; 
+		}
+	function back() { 
+		times++; 
+		document.getElementById("multiply").innerHTML = "1654 * 723 = ?"; 
+		document.getElementById("multiply").onclick = mult;
+		document.getElementById("counter").innerHTML = "button clicked " + times + " times"; 
+	}
+	function rewrite() {
+		document.getElementById("typed").innerHTML = document.getElementById("enter").value;
+	}
+</script>

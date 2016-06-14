@@ -1,0 +1,89 @@
+body {
+	background-color: white; 
+	font-family: sans-serif;
+}
+h1 {
+    text-align: center; 
+    font-weight: bold; 
+    color: dodgerblue
+}
+
+a{
+    text-decoration: none; 
+}
+/*
+a:link { 
+	
+}
+a:visited {
+	
+}
+a:hover { 
+	
+}
+a:active { 
+	
+}
+*/
+ul { 
+	list-style-image: url('https://cutekawaiiresources.files.wordpress.com/2013/03/11jr6sx.gif');
+}
+li { 
+    font-size: 1.5em;
+}
+#banner { 
+    width: 100%;  
+    position:relative;
+    bottom: 0; 
+    margin-top: 3em; 
+}
+.clicker { 
+    background-color: dodgerblue; 
+    color: white; 
+    transition: .5s; 
+    padding: 1.1em; 
+    margin: 1em; 
+    margin-left: -1em; 
+    border-bottom-right-radius: 1em; 
+    top: -1em;
+    z-index: 6;
+    position: absolute;
+}
+.clicker:hover {
+    background-color: lightblue; 
+    transition: .5s; 
+}
+#footer {
+    position: relative; 
+    bottom: 6em;
+    left: 34em; 
+    width: 20em; 
+    font-style: bold; 
+    font-size: 1.5em;
+    color: white; 
+}
+.box {
+    padding: 3em; 
+    height: 25em; 
+    background-color: dodgerblue; 
+    color: white;
+    border-radius: 3em; 
+    display:inline;
+}
+#picdiv { 
+    float: left; 
+    width: 42%; 
+    text-align: center; 
+}
+#list {
+    float: right; 
+    width: 42%; 
+}
+::selection {
+    background-color: transparent;
+}
+answers { 
+    width: 25%; 
+    display: inline;
+    float: left;
+}

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<link rel="stylesheet" type="text/css" href="quizgame.css"/>
+		<script type="text/javascript" src="quizgame.js"></script>		
+		<title>Assignment 1</title> 
+	</head> 
+	<body>
+		<div id="startscreen">
+			<div id="start" onclick="start()"> Start the quiz! </div>
+		</div>
+		<a href="../index.html" class="clicker">return to index</a>
+		<h1 id="title">Quiz Game: 120 Crayola Colors</h1>
+		<div id="top">
+			<div id="enter">
+			    <h2>Enter Color: </h2>
+			    <input id="input" type="text" oninput="checkGuess()" style="margin: 5em;">
+			</div>
+			<div id = "center"> 
+			<div id="start" onclick="start()"> Restart </div>
+			<a href="../index.html"><div id="start"> Quit </div></a>
+			</div>
+			<div id = "progressbar"><div id = "progressbarfill"></div> </div>
+			<div id="timer">
+			    <h2 id="counter">Time Left: 00:00 </h2>
+			</div>
+		</div>
+		<br>
+		<br>
+	    <ul id="answers">
+	    </ul>
+	</body>
+</html>
+

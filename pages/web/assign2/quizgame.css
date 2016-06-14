@@ -1,0 +1,102 @@
+body{
+	background: black;
+}
+#guess {
+    padding: 0;
+}
+h2{
+	color:white;
+}
+#startscreen{
+	width: 99.8%;
+	height: 99%; 
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	position:absolute;
+	z-index: 5;
+	background: white;
+	opacity: 90%;
+}
+#start {
+	position: relative;
+	margin: 1em;
+	background-color: black;
+	top: 50%;
+	color: white;
+	cursor: pointer;
+	padding: 1em;
+	width: 10em;
+	display: inline;
+	font-size: 2em;
+	border-color: white;
+	border-style: solid; 
+	border-width: 4px; 
+	transition: .5s;
+}
+#start:hover{
+	transition: .5s; 
+	background-color: #555555; 
+}
+#enter {
+	float: left;
+}
+#center {
+	margin: auto;
+	float:right;
+}
+#timer {
+	float: right;
+	color: white;
+	position: relative;
+	padding-right: 4em;
+	top: -2em; 
+}
+#top {
+	height:12em;
+}
+h3 {
+	position: absolute;
+    top: 4em;
+    font-size: 5em;
+    color: white;
+    margin: auto;
+    left:0; 
+    right:0; 
+}
+#title{
+	color: white;
+}
+#question{
+	color: lightgray;
+	padding: 2em;
+	padding-bottom: 0;
+}
+table{
+	color:white;
+	width: 90%;
+	margin: auto;
+	margin-top: 2em;
+	font-size: 1.5em; 
+}
+tr { 
+	display: block; 
+	float: left; 
+}
+th, td {
+	text-align: center;
+ 	display: block; 
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+}
+#q1, #q2 {
+	/*style the question columns*/
+	width: 29.85%;
+}
+#a1, #a2{
+	width: 19.85%;
+}
