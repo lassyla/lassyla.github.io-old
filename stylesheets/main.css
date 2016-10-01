@@ -33,19 +33,13 @@ ul {
 #vid a{
     color: rgb(045, 050, 087);
 }
-li a:link {
+li a {
     color: white
-}
-li a:visited {
-    color: white; 
 }
 li:hover {
     color: white;
-    background-color: rgb(127, 213, 147); 
+    background-color: rgb(88, 135, 119); 
     transition: .5s;
-}
-li a:active {
-    color: darkturquoise; 
 }
 li {
     padding-bottom: .7em; 
@@ -118,19 +112,19 @@ ul li:hover .dropdown {
     position: relative; 
 }
 #footer {
-        position: relative; 
+    position: relative; 
     text-align: center; 
     color:white; 
     padding-bottom: 1em;
     background-color:rgb(127, 213, 147);
     bottom: 0;
     padding: 0; 
+
 }
 #info {
-    //background-color: rgb(184, 246, 147); 
+    background-color: rgb(184, 246, 147); 
     margin: auto; 
     padding-bottom: 10em;
-    min-height: 100%; 
     background: linear-gradient( rgb(245, 246, 147),rgb(184, 246, 147), rgb(127, 213, 147)); 
 }
 #footerinfo { 
@@ -181,18 +175,29 @@ ul li:hover .dropdown {
     #vid{width:100%;}
     #twit{width:100%;
     top: 4em; }    
-    #info {height: 80em;}
     }
 @media screen and (max-width: 80px) {
     #welc{width: 90%}
     body{font-size: small;}
     .box{width: 80%;}
-    #info{height: 90em;}
     
     }
 @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
         #welc{width: 80%}
     body{font-size: small;}
     .box{width:80%;}
-    #info{height:90em;}
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(045, 050, 087); 
 }

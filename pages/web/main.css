@@ -11,7 +11,7 @@ h1 {
     margin: 50px; 
 }
 #stuff{
-    width: 920px; 
+    display: inline-block; 
     margin: auto; 
     height: 500px; 
     
@@ -22,49 +22,12 @@ h1 {
     height: 500px; 
     float: left; 
 }
-#image{
-    width: 250px; 
-    height: 250px; 
-    border-style: double; 
-    border-color: white; 
-    border-width: 4px;      
-    padding: 5px; 
-    background-color: rgb(219, 84, 95); 
-    
-}
-#desc{
-    color: white; 
-    height: 147px; 
-    margin: 10px; 
-    background-color: rgb(219, 84, 95); 
-    padding: 10px; 
-    border-style: double; 
-    border-color: white; 
-    border-width: 4px; 
-}
-#action{
-    color: white; 
-    background-color: rgb(219, 84, 95); 
-    margin: 10px; 
-    text-align: center; 
-    padding: 10px; 
-    border-style: double; 
-    border-color: white; 
-    border-width: 4px; 
-    transition: 1s; 
-    display: block; 
-    text-decoration: none; 
-}
-#action:hover{
-    background-color: rgb(201, 33, 105); 
-    transition: 1s; 
-    cursor: pointer; 
-}
-#right{
+#middle{
     width: 630px; 
     height: 500px; 
     display: inline; 
-    float: right; 
+    float: left; 
+    margin-left: 20px; 
     overflow-y: scroll; 
     scrollbar-face-color: black; 
     overflow-x: hidden; 
@@ -74,6 +37,72 @@ h1 {
     background-color: rgb(219, 84, 95); 
 
 }
+#right{
+    display: inline; 
+    width: 270px; 
+    height: 500px; 
+    margin-left: 10px; 
+    float: left; 
+    padding-top: 310px; 
+}
+#arrows{
+    float: left; 
+}
+.arrow{
+    border: 4px double white; 
+    display: inline-block; 
+    width: 40px; 
+    height: 40px; 
+    line-height: 36px; 
+    text-align: center; 
+    margin-top: 10px; 
+    font-size: 20px; 
+    background-color: rgb(219, 84, 95); 
+    transition: 1s; 
+
+}
+.arrow:hover{
+    background-color: rgb(201, 33, 105); 
+    cursor: pointer; 
+    transition: 1s; 
+}
+#image{
+    width: 250px; 
+    height: 250px; 
+    border: 4px double white;     
+    padding: 5px; 
+    background-color: rgb(219, 84, 95); 
+    
+}
+#desc{
+    color: white; 
+    height: 80px; 
+    margin-top: 10px; 
+    background-color: rgb(219, 84, 95); 
+    padding: 10px; 
+    border: 4px double white; 
+}
+#action{
+    float: right; 
+    color: white; 
+    height: 80px;
+    line-height: 70px; 
+    width: 70px; 
+    background-color: rgb(219, 84, 95); 
+    margin-top: 10px; 
+    text-align: center; 
+    padding: 10px; 
+    border: 4px double white;     
+    display: block; 
+    text-decoration: none; 
+    transition: 1s; 
+}
+#action:hover{
+    background-color: rgb(201, 33, 105); 
+    cursor: pointer; 
+    transition: 1s; 
+}
+
 #scroll{
     float: right; 
     background: red; 
@@ -155,7 +184,7 @@ td img{
     background-repeat: repeat-x;
     background-position: center;
     animation: marquee 300s linear infinite;
-    -webkit-animation: marquee 300s linear infinite;
+    -webkit-animation: marquee 100s linear infinite;
 }
 #bgbottom{
     position: fixed;
@@ -173,4 +202,17 @@ td img{
 }
 @-webkit-keyframes marquee {
     100% { left: -2794px; }
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: rgb(251, 201, 121); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
 }

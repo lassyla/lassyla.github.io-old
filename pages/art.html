@@ -12,26 +12,21 @@
     <div id="nav">
         <ul>
             <li><a href="../index.html">home</a></li>
-                <li><a href="about.html">about&#x25BE;</a>
-                    <ul class="dropdown">
-                        <li><a href="about.html">about me</a></li>
-                        <li><a href="links.html">links&#x25B8;</a>
-                            <ul class="sidedrop">
-                                <li><a href=https://www.facebook.com/alyssa.lee.37669>facebook</a></li>
-                                <li><a href="https://twitter.com/lassylaa">twitter</a></li>
-                                <li><a href="https://plus.google.com/104544858090515809112">google+</a></li>
-                                <li><a href="links.html">more</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <li><a href="about.html">about</a>
                 </li>            
             <li style = "background-color: rgb(127, 213, 147);"> <a href = "art.html">gallery&#x25BE; </a>
                 <ul class="dropdown">
-                    <li style = "background-color: rgb(127, 213, 147);">art</li>
+                    <li style = "background-color: rgb(127, 213, 147);"><a href="art.html">art</a></li>
                     <li><a href="coding.html">coding</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">contact</a></li> 
+            <li><a href="links.html">links&#x25BE;</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA">youtube</a></li>
+                    <li><a href="https://www.instagram.com/lassylaa/">instagram</a></li>
+                    <li><a href="links.html">more</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 <!-- end of navgation bar -->
@@ -41,14 +36,19 @@
         <div id="holder">
             <div class="gallery" id="g2016">
                 <h1>2016</h1>
+                <img src="../art/art.png" onclick=show(this) alt="<h1>Art Stickers</h1><br> For my school's Art Honor Society!">
+                <img src="../art/final_stickers.png" onclick=show(this) alt="<h1>Misc. stickers</h1><br>To brighten your day">
+                <img src="../art/breakfastpic.png" onclick=show(this) alt="<h1>Breakfast Stickers</h1><br> The most important meal of the day <br> Watch a speedpaint <a href='https://www.youtube.com/watch?v=_0NXwRJH6Eg'>here!</a>">
+                <img src="../art/pokemon.png" onclick=show(this) alt="<h1>3D Pokemon</h1><br> T-shirt design for a friend!">
+                <img src="../art/wynter2.png" onclick=show(this) alt="<h1>Wynter</h1><br> Digital art">
                 <img src="../art/coda.gif" onclick=show(this) alt="<h1>3D Character Design</h1><br>3D model made with Blender">
                 <img src="../art/peep.gif" onclick=show(this) alt="<h1>Peep</h1><br>3D model made with Blender">
                 <img src="../art/forest_monster.png" onclick=show(this) alt="<h1>Your Friends</h1><br>Digital art">
                 <img src="../art/codasheet.png" onclick=show(this) alt="<h1>Character Design</h1><br>Digital art">
-                <img src="../art/strawberrycake.png" onclick=show(this) alt="<h1>Cake Roll</h1><br>Digital art">
-                <img src="../art/tart.png" onclick=show(this) alt="<h1>Tart</h1><br>Digital art">
-                <img src="../art/sundae.png" onclick=show(this) alt="<h1>Sundae</h1><br>Digital art">
-                <img src="../art/portrait.png" onclick=show(this) alt="<h1>Untitled</h1><br>Digital art">
+                <img src="../art/strawberrycake.png" onclick=show(this) alt="<h1>Cake Roll</h1><br>Digital art<br> Watch a speedpaint <a href='https://www.youtube.com/watch?v=PCqPjs7nxUY'>here!</a>">
+                <img src="../art/tart.png" onclick=show(this) alt="<h1>Tart</h1><br>Digital art<br> Watch a speedpaint <a href='https://www.youtube.com/watch?v=PCqPjs7nxUY'>here!</a>">
+                <img src="../art/sundae.png" onclick=show(this) alt="<h1>Sundae</h1><br>Digital art<br> Watch a speedpaint <a href='https://www.youtube.com/watch?v=PCqPjs7nxUY'>here!</a>">
+                <img src="../art/portrait.png" onclick=show(this) alt="<h1>Untitled</h1><br>Digital art<br> Watch a speedpaint <a href='https://www.youtube.com/watch?v=7zm_My8GvNA'>here!</a>">
 
             </div>
             <div class="gallery" id="g2015" style="display:none">
@@ -73,17 +73,18 @@
                 <img src="../art/hel%20lo%20friends%20.png" onclick=show(this) alt = "...">
             </div>
         </div>    
-    </div>
         <div id="arrows">
             <div id="left" onclick=backward() style="display:none;"> &#171; </div>
             <div id="right" onclick=forward()> &#187; </div>
         </div>
+
         <div id="fadebg" onclick=leave()> </div>
         <div id="above">
             <img src="birds-of-paradise.png" id="switch" alt = "the opened image">    
             <div id="close" onclick=leave()>x</div>
             <div id="desc"></div>
         </div>
+    </div>
 <!-- Footer -->
     <div id="footer">
     <div id = "beans">   </div>

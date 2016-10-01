@@ -20,9 +20,15 @@
         <div id="left">
             <img id="image" src="assign0.png" alt="descriptive image">
             <div id="desc"> the very first assignment</div>
-            <a id="action" href="assign0/index.html"> inspect </a>
+            <div id="arrows">
+                <div class="arrow" id="uparrow" onmousedown="up()"> 	&uarr;</div><br> 
+                <div class="arrow" id="leftarrow" onmousedown="left()">	&larr;</div>
+                <div class="arrow" id="downarrow" onmousedown="down()">	&darr;</div>
+                <div class="arrow" id="rightarrow" onmousedown="right()">	&rarr;</div>
+            </div>
+            <a id="action" href="assign0/index.html"> enter </a>
         </div>
-        <div id="right"> 
+        <div id="middle"> 
             <table id="grid"> 
                 <tr>
                 <td id="assign0" onclick="goto(0)"><img src="assign0.png"> <div class="caption">Assignment 0 </div></td> 
@@ -35,12 +41,18 @@
                 <td id="phppractice" onclick="goto(6)"><img src="phppractice.png"> <div class="caption"> PHP Practice</div></td>
                 <td id="assign5" onclick="goto(7)"><img src="assign5.png"> <div class="caption"> Assignment 5</div></td>
                 <tr>
-                <td id="canvaspractice" onclick="goto(8)"><img src="canvaspractice.png"> <div class="caption"> Canvas practice<</div>/td> 
+                <td id="canvaspractice" onclick="goto(8)"><img src="canvaspractice.png"> <div class="caption"> Canvas practice</div>/td> 
                 <td id="increment" onclick="goto(9)"><img src="increment.png"> <div class="caption"> Page visit counter</div></td> 
                 <td id="api" onclick="goto(10)"><img src="api.png"> <div class="caption"> API practice</div></td> 
                 <td id="final" onclick="goto(11)"><img src="final.png"> <div class="caption">Final Project</div></td> 
+                <tr>
+                <td>empty</td>
+                <td>empty</td>
+                <td>empty</td>
+                <td>empty</td>    
             </table> 
         </div>
+
     </div>
 </body>
 </html> 
@@ -58,23 +70,60 @@ function setup(){
     document.onkeydown = function(e){
         switch(e.keyCode){
                 case(38):
-                    goto((currentIndex - 4 + rectanglevar) % rectanglevar);
+                    up();
                     break; 
                 case(40):
-                    goto((currentIndex + 4 ) % rectanglevar);
+                    down(); 
                     break;
                 case(39):
-                    goto((parseInt(currentIndex/4)) * 4 + (currentIndex + 1) % 4); 
+                    right();
                     break;
                 case(37):
-                    goto((parseInt(currentIndex/4)) * 4 + (currentIndex + 3) % 4); 
+                    left();  
                     break;
                 case(13): 
-                    window.location.href=pages[currentIndex];
+                    window.location.href=pages[currentIndex] + "/index.html";
                     break;
             }
     }
+    document.onkeyup = function(e){
+        document.getElementById("leftarrow").style.border = "4px double white";  
+        document.getElementById("uparrow").style.border = "4px double white"; 
+        document.getElementById("downarrow").style.border = "4px double white"; 
+        document.getElementById("rightarrow").style.border = "4px double white"; 
+    }
+    document.onmouseup = function(e){
+        setTimeout(function(){
+            document.getElementById("leftarrow").style.border = "4px double white";  
+            document.getElementById("uparrow").style.border = "4px double white"; 
+            document.getElementById("downarrow").style.border = "4px double white"; 
+            document.getElementById("rightarrow").style.border = "4px double white"; 
+        }, 50)
+    }
 
+}
+function left(){
+    document.getElementById("leftarrow").style.border = "4px solid white"; 
+    goto((parseInt(currentIndex/4)) * 4 + (currentIndex + 3) % 4);
+
+    
+}
+function right(){
+    document.getElementById("rightarrow").style.border = "4px solid white"; 
+
+    goto((parseInt(currentIndex/4)) * 4 + (currentIndex + 1) % 4)
+    
+}
+function up(){
+    document.getElementById("uparrow").style.border = "4px solid white";  
+    goto((currentIndex - 4 + rectanglevar) % rectanglevar);
+   
+}
+function down(){
+    document.getElementById("downarrow").style.border = "4px solid white"; 
+    goto((currentIndex + 4 ) % rectanglevar)
+
+    
 }
 function goto(a) {
     var current = pages[currentIndex]
@@ -82,8 +131,8 @@ function goto(a) {
     	clicks += 1; 
     else
     	clicks = 0; 
-    if(clicks > 1)
-    	window.location.href=pages[currentIndex];
+    if(clicks >= 1)
+    	window.location.href=pages[currentIndex] + "/index.html";
     if (current=="")
         current = "empty";
     document.getElementById(current).style.border = "1px solid white";
@@ -96,7 +145,7 @@ function goto(a) {
         current = "empty"
     currentIndex = a; 
     document.getElementById("image").src = current + ".png";
-    document.getElementById("action").href = current; 
+    document.getElementById("action").href = current + "/index.html"; 
     if (current=="empty")
         document.getElementById("action").href = ""; 
     document.getElementById("desc").innerHTML = descriptions[a]; 
