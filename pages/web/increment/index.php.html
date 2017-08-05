@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title> Incrementation</title>
+	<style type="text/css">
+		div{
+			background-color:yellow;
+		}
+	</style>
+</head>
+<body>
+	<?php
+		$filename = "visitct.txt";
+		if(file_exists($filename)){
+			$file = explode("\n", file_get_contents($filename));
+			$count = intval($file[0]) + 1;
+			echo "<div> this page has been visited " . $count . " times </div>"; 
+			echo "<div> last visit: " . $file[1] . " (EST)";
+		}
+		else{
+			$count = 1; 
+			echo "<div> you are the first visitor! congrats. </div>"; 
+		}
+		//output count 
+		//save to a file
+		date_default_timezone_set('America/Chicago');
+		$date = date('d/m/Y == H:i:s');
+		$wrfile = fopen($filename, "wr");
+		fwrite($wrfile, $count);
+		fwrite($wrfile, "\n" . $date);
+		fclose($wrfile); 
+	?>
+</body>
+</html>
