@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hey I'm Alyssa</title>
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="gallery.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
+
+  </head>
+  <body>
+    <div id="navbar"> 
+      <ul id="navbar-list"> 
+        <img id="navbutton" src="logo2.png" onclick="togglenav()">
+        <li id="nav0" onclick="gotopage(0)" style="color: white">⌂</li>
+        <li id="nav1" onclick="gotopage(1)">about</li>
+        <li id="nav2" onclick="gotopage(2)">work</li>
+        <li id="nav3" onclick="gotopage(3)">contact</li>
+      </ul>
+    </div>
+    <div id="wrapper">
+      <div id="background1"> </div>
+
+      <div id="background2"> </div>
+      <div id="midground">
+        <section class="page" id="page0"> 
+        <div id="threedcontainer">      
+          <h1 id="lassyla">alyssa lee</h1>
+        </div>
+        </section>
+
+        <section class="page" id="page1"> 
+          <h1>about</h1>
+          <div class="desc">I am a student at Carnegie Mellon pursuing a degree in computer science and art.  </div>
+        </section>
+
+        <section class="page" id="page2"> 
+          <h1>work</h1>
+          <div class="desc">hekjhkjdhkjd</div>
+          <div class="workcontainer">art portfolio</div>
+          <div class="workcontainer">bot-a-razzi</div>
+          <div class="workcontainer">snow gum</div>
+          <div class="workcontainer">the afterthought</div>
+          <div class="workcontainer">codejest</div>
+          <div class="workcontainer">selection sort</div>
+          <div class="workcontainer">archive of works</div>
+        </section>
+
+        <section class="page" id="page3"> 
+          <h1>contact</h1>
+        </section>
+      </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="gallery.js"></script>
+
+  </body>
+</html>

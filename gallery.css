@@ -1,0 +1,21 @@
+.codebox {
+  width: 31vh; 
+  height: 31vh; 
+  background: green; 
+  background-size: 100%; 
+  display: inline-block; 
+  font-size: 5vh; 
+}
+.codebox img{
+  width: 31vh; 
+  height: 31vh;   
+  position: absolute; 
+  transition: .5s; 
+  z-index: 2;
+}
+.codebox img:hover 
+{
+  opacity: .1; 
+  transition: .5s; 
+  
+}

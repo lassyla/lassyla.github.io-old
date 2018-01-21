@@ -1,0 +1,125 @@
+body {
+  margin: 0; 
+}
+#wrapper {
+  height: 100vh; 
+  overflow-x: hidden; 
+  overflow-y: auto;
+  perspective: 1px; 
+  transform-style: preserve-3d; 
+}
+#background1{
+  background: url('background.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500vh; 
+  width: 100vw; 
+  position: absolute; 
+  transform: translateZ(-2px) scale(3);  
+}
+
+#midground {
+  height: 100vh;
+  width: 100vw; 
+  position: absolute; 
+
+}
+.page {
+
+  width: 100vw; 
+  min-height: 100vh; 
+  position: relative; 
+  padding: 1px;
+  background-size: 100%; 
+  opacity: .5; 
+}
+#page0 {
+  text-align: center; 
+  height: 100vh; 
+}
+#page1{  
+  background-image: url('https://placekitten.com/g/1000/800'); 
+  background-size: 100%; 
+}
+#page1 {
+  height: 100vh; 
+}
+#page2 {
+  background: yellow;
+  height: 500vh; 
+}
+#page3 {
+  background: pink;
+  height: 100vh; 
+}
+
+#current {
+  background: white; 
+  opacity: 100%; 
+}
+#navbutton{
+  width: 30px; 
+  height: 30px; 
+}
+#navbutton:hover{
+  cursor:pointer; 
+}
+#navbar {
+  width: 100%; 
+  height: 7vh; 
+  position: fixed; 
+  font-size: 5vh; 
+  z-index: 1; 
+}
+#navbar-list {
+  display: inline;
+  position: absolute; 
+  right: 0vw; 
+  top: -5vh; 
+}
+#navbar-list li {
+  display: inline; 
+  font-size: 2vh; 
+  z-index: 5; 
+  cursor: pointer; 
+  padding: 1vh; 
+  transition: .5s; 
+}
+#navbar-list li:hover {
+  color: white;
+  transition: .5s; 
+}
+h1 {
+  width: 100%; 
+  font-size: 10vh; 
+  text-transform: lowercase; 
+  color: white; 
+  z-index: 2; 
+}
+.desc {
+  color: white; 
+  font-size: 7vh; 
+  width: 100vw; 
+}
+
+#threedcontainer{
+  height: 99vh; 
+  line-height: 80vh; 
+}
+canvas{    
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  right: 0; 
+  left: 0; 
+  margin: auto; 
+}
+
+.workcontainer {
+  background: green; 
+  height: 50vh; 
+  margin: 4vw;  
+  display: block; 
+}
