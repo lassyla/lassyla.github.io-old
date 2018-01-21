@@ -1,6 +1,11 @@
 body {
   margin: 0; 
 }
+#cover {
+  width: 100vw; 
+  height: 100vh; 
+  background: white; 
+}
 #wrapper {
   height: 100vh; 
   overflow-x: hidden; 
@@ -24,6 +29,7 @@ body {
   height: 100vh;
   width: 100vw; 
   position: absolute; 
+/*  transform: translateZ(-1px) scale(2);  */
 
 }
 .page {
@@ -33,26 +39,18 @@ body {
   position: relative; 
   padding: 1px;
   background-size: 100%; 
-  opacity: .5; 
 }
 #page0 {
   text-align: center; 
   height: 100vh; 
 }
 #page1{  
-  background-image: url('https://placekitten.com/g/1000/800'); 
-  background-size: 100%; 
 }
 #page1 {
-  height: 100vh; 
 }
 #page2 {
-  background: yellow;
-  height: 500vh; 
 }
 #page3 {
-  background: pink;
-  height: 100vh; 
 }
 
 #current {
@@ -118,7 +116,7 @@ canvas{
 }
 
 .workcontainer {
-  background: green; 
+  background: white; 
   height: 50vh; 
   margin: 4vw;  
   display: block; 
