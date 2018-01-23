@@ -1,10 +1,14 @@
 body {
   margin: 0; 
+  overflow-x: hidden; 
+  overflow-y: hidden; 
+
 }
 #cover {
   width: 100vw; 
   height: 100vh; 
   background: white; 
+  
 }
 #wrapper {
   height: 100vh; 
@@ -14,7 +18,9 @@ body {
   transform-style: preserve-3d; 
 }
 #background1{
-  background: url('background.png') no-repeat center center; 
+  background: url('background.png');
+  background-size: auto 100%;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,18 +39,21 @@ body {
 
 }
 .page {
-
-  width: 100vw; 
   min-height: 100vh; 
   position: relative; 
   padding: 1px;
   background-size: 100%; 
+  background: white; 
+  opacity: .75; 
+  margin-top: 0; 
 }
 #page0 {
   text-align: center; 
   height: 100vh; 
+  background: none; 
 }
 #page1{  
+  
 }
 #page1 {
 }
@@ -93,11 +102,9 @@ h1 {
   width: 100%; 
   font-size: 10vh; 
   text-transform: lowercase; 
-  color: white; 
   z-index: 2; 
 }
 .desc {
-  color: white; 
   font-size: 7vh; 
   width: 100vw; 
 }
@@ -120,4 +127,12 @@ canvas{
   height: 50vh; 
   margin: 4vw;  
   display: block; 
+}
+
+#leftimage {
+   
+}
+
+#rightimage{
+  
 }

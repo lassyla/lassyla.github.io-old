@@ -82,7 +82,7 @@ var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
 var cube = new THREE.Mesh(geometry, material);
 cube.position.set(2, 1, 0)
-cube.userData = {title: "coding", page: 2, color: 0x00ff00};
+cube.userData = {title: "work", page: 2, color: 0x00ff00};
 scene.add(cube);
 var me = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({color: 0x00ffff}));
 me.position.set(-2, 1, 0)
@@ -90,7 +90,7 @@ me.userData = {title: "about", page: 1, color: 0x00ffff};
 scene.add(me);
 var dog = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({color: 0xff00ff}));
 dog.position.set(2, -1, 0)
-dog.userData = {title: "art", page: 3, color: 0xff00ff};
+dog.userData = {title: "no", page: 3, color: 0xff00ff};
 scene.add(dog);
 var comp = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({color: 0xffff00}));
 comp.position.set(-2, -1, 0)
