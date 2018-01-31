@@ -2,10 +2,10 @@ body {
   margin: 0; 
   overflow-x: hidden; 
   overflow-y: hidden; 
-
+  color: white; 
 }
 #cover {
-  width: 100vw; 
+  width: 100%; 
   height: 100vh; 
   background: white; 
   
@@ -18,24 +18,22 @@ body {
   transform-style: preserve-3d; 
 }
 #background1{
-  background: url('background.png');
-  background-size: auto 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('background.png') no-repeat center ;
   background-size: cover;
-  height: 500vh; 
   width: 100vw; 
   position: absolute; 
-  transform: translateZ(-2px) scale(3);  
+  transform: translateZ(-1px) scale(2);  
+}
+#background2{
+  position: absolute; 
+  transform: translateZ(-1px) scale(2);  
 }
 
 #midground {
   height: 100vh;
-  width: 100vw; 
+  width: 100%; 
   position: absolute; 
-/*  transform: translateZ(-1px) scale(2);  */
+  transform: translateZ(0);  
 
 }
 .page {
@@ -43,8 +41,7 @@ body {
   position: relative; 
   padding: 1px;
   background-size: 100%; 
-  background: white; 
-  opacity: .75; 
+  margin: 1vw; 
   margin-top: 0; 
 }
 #page0 {
@@ -53,7 +50,6 @@ body {
   background: none; 
 }
 #page1{  
-  
 }
 #page1 {
 }
@@ -99,6 +95,7 @@ body {
   transition: .5s; 
 }
 h1 {
+  text-align: center; 
   width: 100%; 
   font-size: 10vh; 
   text-transform: lowercase; 
@@ -106,12 +103,28 @@ h1 {
 }
 .desc {
   font-size: 7vh; 
-  width: 100vw; 
+  width: 100%; 
 }
-
+#scrolldown{
+  position: absolute; 
+  top: 90vh; 
+  left: 0; 
+  right: 0; 
+  width: 5vh;
+  height: 5vh; 
+  margin: auto; 
+}
+#scrolldown:hover{
+  cursor: pointer; 
+}
 #threedcontainer{
   height: 99vh; 
   line-height: 80vh; 
+  
+}
+#lassyla{
+  width: 100%; 
+  text-align: center; 
 }
 canvas{    
   position: absolute;
@@ -123,16 +136,89 @@ canvas{
 }
 
 .workcontainer {
-  background: white; 
-  height: 50vh; 
-  margin: 4vw;  
-  display: block; 
+  position: relative; 
+  margin: 8vw;  
+  margin-bottom: 30vh; 
+  display: block;
+  padding: 2vh; 
+  font-size: 5vh;
 }
 
-#leftimage {
-   
+.workdesc{
+  display: inline-bock; 
+  min-height: 20vh; 
+  font-size: 3vw; 
+  position: absolute; 
+  margin: auto; 
+  top: 0; 
+  bottom: 0; 
+  width: 50%; 
 }
 
-#rightimage{
+.left{
+  padding-left: 35vh;
+}
+.right{
+  padding-right: 35vh; 
+  text-align: right; 
+  right: 0; 
+}
+
+.leftimage {
+  height: 30vh; 
+  border-radius: 50%; 
+
+  position: absolute; 
+  margin: auto; 
+  top: 0; 
+  bottom: 0; 
+  background: green; 
+  z-index: 2; 
+}
+
+.leftimage:hover{
+  cursor: pointer; 
+}
+.rightimage{
+  height: 30vh; 
+  border-radius: 50%; 
+  position: absolute; 
+  margin: auto; 
+  top: 0; 
+  bottom: 0; 
+  right: 0; 
+  z-index: 2; 
+
+}
+.rightimage:hover{
+  cursor: pointer; 
+}
+h2{
+  font-size: 10vh; 
+}
+
+#transitionscreen{
+  position: fixed; 
+  width: 100vw; 
+  height: 100vh; 
+  background-color: blue; 
+  z-index: 10; 
+  top: 0; 
+  text-align: center; 
+  line-height: 100vh; 
+  color: white; 
+  font-size: 10vh; 
+}
+@media only screen and (max-width: 768px) {
+  .leftimage {
+    width: 70vw; 
+    height: 70vw;
+    left: 0; 
+    right: 0; 
+  }
+  .workcontainer{
+    background: green; 
+    min-height: 70vh;
+  }
   
 }

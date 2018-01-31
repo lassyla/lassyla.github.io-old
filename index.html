@@ -3,14 +3,16 @@
   <head>
     <title>Hey I'm Alyssa</title>
     <link rel="stylesheet" href="main.css"> 
-    <link rel="stylesheet" href="gallery.css"> 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
 
   </head>
   <body>
-    <div id="cover"> under construction bee p beep</div>
+    <div id="transitionscreen">loading...</div>
+
+<!--    <div id="cover"> under construction bee p beep</div>-->
     <div id="navbar"> 
       <ul id="navbar-list"> 
         <img id="navbutton" src="logo2.png" onclick="togglenav()">
@@ -22,25 +24,32 @@
     </div>
     <div id="wrapper">
       <div id="background1"> </div>
+      <div id="background2">      </div>
 
-      <div id="background2"> </div>
       <div id="midground">
-        <section class="page" id="page0"> 
-        <div id="threedcontainer">      
-          <h1 id="lassyla">alyssa lee</h1>
-        </div>
+          <section class="page" id="page0"> 
+          <div id="threedcontainer">      
+            <h1 id="lassyla">alyssa lee</h1>
+          </div>
+          <img id="scrolldown" src="https://thumbs.gfycat.com/AcidicGlamorousCirriped-max-1mb.gif" onclick="gotopage(1)">
         </section>
 
         <section class="page" id="page1"> 
           <h1>about</h1>
-          <div class="desc">UNDER CONSTRUCTION  </div>
+          <div class="desc">Hi! i am a person and i like to do things! by the way this page is UNDER CONSTRUCTION </div>
         </section>
 
         <section class="page" id="page2"> 
           <h1>work</h1>
-          <div class="desc">hekjhkjdhkjd</div>
-          <div class="workcontainer">art portfolio <img src="logo2.png" class="leftimage"></div>
-          <div class="workcontainer">bot-a-razzi <img src="logo2.png" class="leftimage"></div>
+          <div class="workcontainer"> 
+            <img src="logo2.png" class="leftimage" onclick="goToGal()">     
+            <div class="workdesc left">i like to do art! click here to see my gallery!
+            </div>
+          </div>
+          <div class="workcontainer"><img src="logo2.png" class="rightimage">
+            <div class="workdesc right">i like to do other stuff too! click here to see sjkdghlkfdjghdsf
+            </div>
+          </div>
           <div class="workcontainer">snow gum</div>
           <div class="workcontainer">the afterthought</div>
           <div class="workcontainer">codejest</div>
@@ -56,7 +65,6 @@
 
 
     <script src="main.js"></script>
-    <script src="gallery.js"></script>
 
   </body>
 </html>

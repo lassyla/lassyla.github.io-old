@@ -1,12 +1,16 @@
 //TO DO: the scroller() doesnt do anything
 //TO DO: create graphics
 //TO DO: design the divs for projects. think especially about responsive design. 
-
+//instead of going left on transition screen, open like doors
 
 var scrolltimeout; 
 var numpages = 3; 
 var currentpage = 0; 
 var nav = false; 
+
+  $("#background1").height($("#wrapper")[0].scrollHeight );
+
+
 
 $("#wrapper").scroll(function () {
     if(scrolltimeout) clearTimeout(scrolltimeout); 
@@ -54,7 +58,6 @@ function gotopage(x) {
 }
 
 function togglenav(){
-  console.log("hey");
   if(nav){
     $("#navbar").animate({
       right: "-100px"
@@ -101,6 +104,9 @@ camera.position.z = 4;
 
 
 window.addEventListener('resize', function() {
+  $("#background1").height(0); 
+  $("#background1").height($("#wrapper")[0].scrollHeight );
+
   if(window.innerWidth > window.innerHeight)
     renderer.setSize(window.innerHeight, window.innerHeight);
   else {
@@ -152,3 +158,16 @@ var animate = function () {
 
 animate(); 
 
+function goToGal(){
+    $("#transitionscreen").html("loading..."); 
+
+    $("#transitionscreen").animate({"right":"0", "opacity":1}, 1000, function(){window.location.href = "./illustrations.html";
+    });
+}
+$(window).on("load", function(){
+  $("#transitionscreen").html("all done"); 
+  setTimeout(function(){
+    $("#transitionscreen").animate({"right":"-100vw", "opacity":0}, 1000)
+  }, 1000); 
+
+}); 

@@ -2,32 +2,78 @@
 <html lang="en">
   <head>
     <title>Hey I'm Alyssa</title>
-    <link rel="stylesheet" href="main.css"> 
-    <link rel="stylesheet" href="home.css"> 
     <link rel="stylesheet" href="gallery.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>o
+    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
+    <script src="gallery.js"></script>
 
   </head>
-  <body>
+  <body>    
+    <div id="transitionscreen">loading...</div>
 
-        <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="logo2.png"> desc 11 </div>            
-        <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="logo2.png"> desc 10 </div>
-        <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="logo2.png"> desc 9 </div>            
-        <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="logo2.png"> desc 8 </div>
-        <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-        <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="logo2.png"> hello friendo </div>
-        <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-        <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="logo2.png"> hello friendo </div>
-        <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-        <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="logo2.png"> hello friendo </div>
-        <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-        <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="logo2.png"> hello friendo </div>
+    <div id="home" onclick="goBack()">⌂</div>
 
+      <h1>art by alyssa lee</h1>
 
+      <ul id="nav">
+        <li onclick="goToGal(0)" style="color: blue;">personal favorites</li>
+        <li onclick="goToGal(1)">paintings</li>
+        <li onclick="goToGal(2)">doodles</li>
+        <li onclick="goToGal(3)">video</li>
+      </ul>
 
-    <script src="gallery.js"></script>
+      <div id="gal0" class="gallery">
+          <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="images/garden.png"> desc 11 </div>            
+          <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="images/goodbye%20room.png"> desc 10 </div>
+          <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="images/phipps.png"> desc 9 </div>            
+          <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/artfriends.jpg"> desc 8 </div>
+          <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/catalyst.jpg"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/box.png"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/flamingo.jpg"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="logo2.png"> hello friendo </div>
+      </div>
+      <div id="gal1" class="gallery hidden">
+          <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="logo2.png"> desc 11 </div>            
+          <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="logo2.png"> desc 10 </div>
+          <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="logo2.png"> desc 9 </div>            
+          <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/artfriends.jpg"> desc 8 </div>
+          <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/catalyst.jpg"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/box.png"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/flamingo.jpg"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="logo2.png"> hello friendo </div>
+      </div>
+
+      <div id="gal2" class="gallery hidden">
+          <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="images/poo.png"> desc 11 </div>            
+          <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="images/breakfast%20stickers.png"> desc 10 </div>
+          <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="images/robutsflat.png"> desc 9 </div>            
+          <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/spritessquare.png"> desc 8 </div>
+          <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/final_stickers_white.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/fried_egg.png"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>
+          <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/mimi.png"> mimi from super paper mario</div>            
+          <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/mudkip.png"> mudkip from pokemon </div>
+          <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="images/pixel.png"> hello friendo </div>            
+          <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="images/codasheet.png"> hello friendo </div>
+      </div>
+      <div id="screen">
+        <div id="backscreen" onclick="hideDesc()"></div>
+        <div id="left" onclick="goLeft()">< </div>
+        <img id="content" src="background.png">
+        <div id="right" onclick="goRight()">>
+        </div>
+      </div>
+    
 
   </body>
 </html>
