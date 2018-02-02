@@ -3,6 +3,8 @@
   <head>
     <title>Hey I'm Alyssa</title>
     <link rel="stylesheet" href="main.css"> 
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -10,7 +12,7 @@
 
   </head>
   <body>
-    <div id="transitionscreen">loading...</div>
+    <div id="transitionscreen" class="screen">loading...</div>
 
 <!--    <div id="cover"> under construction bee p beep</div>-->
     <div id="navbar"> 
@@ -36,30 +38,56 @@
 
         <section class="page" id="page1"> 
           <h1>about</h1>
-          <div class="desc">Hi! i am a person and i like to do things! by the way this page is UNDER CONSTRUCTION </div>
+          <div class="desc">Hello! I am Alyssa Lee, a freshman at Carnegie Mellon University!  </div>
         </section>
 
         <section class="page" id="page2"> 
           <h1>work</h1>
           <div class="workcontainer"> 
-            <img src="logo2.png" class="leftimage" onclick="goToGal()">     
-            <div class="workdesc left">i like to do art! click here to see my gallery!
+            <img src="images/goodbye%20room.png" class="leftimage" onclick="redir('./illustrations.html')">     
+            <div class="workdesc left"><h3>art gallery</h3>i like to do art! click here to see my gallery!
             </div>
           </div>
-          <div class="workcontainer"><img src="logo2.png" class="rightimage">
-            <div class="workdesc right">i like to do other stuff too! click here to see sjkdghlkfdjghdsf
+          <div class="workcontainer">
+            <img src="logo2.png" class="rightimage">
+            <div class="workdesc right"><h3>bot-a-razzi</h3> an art project made with Connie Ye, Rain Du, and Lexin Yuan. 
             </div>
           </div>
-          <div class="workcontainer">snow gum</div>
-          <div class="workcontainer">the afterthought</div>
-          <div class="workcontainer">codejest</div>
-          <div class="workcontainer">selection sort</div>
-          <div class="workcontainer">archive of works</div>
+          <div class="workcontainer">
+            <img src="images/snowgum.png" class="leftimage" onclick="redir('www.connieye.com/Snow-Gum/temp.html')">
+            <div class="workdesc left"><h3>snow gum</h3>a project made at </div>
+          </div>
+          <div class="workcontainer">
+            <img src="images/spritessquare.png" class="rightimage"
+            onclick="redir('sorts/index.html')">
+            <div class="workdesc right"><h3>selection sort</h3>
+              
+            </div>
+          </div>
+          <div class="workcontainer">
+            <img src="images/shelves.png" class="leftimage">
+            <div class="workdesc left">afterthought</div>
+          </div>
+          <div class="workcontainer">
+            <img src="images/codejest.png" class="rightimage">
+            <div class="workdesc right">code jest
+            </div>
+          </div>
+          <div class="workcontainer">
+            <img src="images/wfpreview.png" class="leftimage">
+            <div class="workdesc left">wiki fractal</div>
+          </div>
+          <div class="workcontainer">
+            <img src="images/wapreview.png" class="rightimage">
+            <div class="workdesc right">web app portfolio
+            </div>
+          </div>
         </section>
 
         <section class="page" id="page3"> 
           <h1>contact</h1>
         </section>
+        
       </div>
     </div>
 

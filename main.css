@@ -3,6 +3,8 @@ body {
   overflow-x: hidden; 
   overflow-y: hidden; 
   color: white; 
+  font-family: 'Poiret One', cursive;
+
 }
 #cover {
   width: 100%; 
@@ -14,7 +16,7 @@ body {
   height: 100vh; 
   overflow-x: hidden; 
   overflow-y: auto;
-  perspective: 1px; 
+  perspective: 2px; 
   transform-style: preserve-3d; 
 }
 #background1{
@@ -34,14 +36,12 @@ body {
   width: 100%; 
   position: absolute; 
   transform: translateZ(0);  
-
 }
 .page {
   min-height: 100vh; 
   position: relative; 
   padding: 1px;
   background-size: 100%; 
-  margin: 1vw; 
   margin-top: 0; 
 }
 #page0 {
@@ -71,16 +71,12 @@ body {
 }
 #navbar {
   width: 100%; 
-  height: 7vh; 
   position: fixed; 
-  font-size: 5vh; 
   z-index: 1; 
 }
 #navbar-list {
-  display: inline;
-  position: absolute; 
-  right: 0vw; 
-  top: -5vh; 
+  float: right; 
+  top: 0;
 }
 #navbar-list li {
   display: inline; 
@@ -102,7 +98,7 @@ h1 {
   z-index: 2; 
 }
 .desc {
-  font-size: 7vh; 
+  font-size: 3vw; 
   width: 100%; 
 }
 #scrolldown{
@@ -147,7 +143,7 @@ canvas{
 .workdesc{
   display: inline-bock; 
   min-height: 20vh; 
-  font-size: 3vw; 
+  font-size: 2vw; 
   position: absolute; 
   margin: auto; 
   top: 0; 
@@ -166,6 +162,8 @@ canvas{
 
 .leftimage {
   height: 30vh; 
+  width:30vh; 
+  object-fit: cover; 
   border-radius: 50%; 
 
   position: absolute; 
@@ -174,6 +172,7 @@ canvas{
   bottom: 0; 
   background: green; 
   z-index: 2; 
+  border: 1vh solid white; 
 }
 
 .leftimage:hover{
@@ -181,6 +180,9 @@ canvas{
 }
 .rightimage{
   height: 30vh; 
+  width: 30vh; 
+  object-fit: cover; 
+
   border-radius: 50%; 
   position: absolute; 
   margin: auto; 
@@ -189,6 +191,7 @@ canvas{
   right: 0; 
   z-index: 2; 
 
+  border: 1vh solid white; 
 }
 .rightimage:hover{
   cursor: pointer; 
@@ -196,8 +199,12 @@ canvas{
 h2{
   font-size: 10vh; 
 }
+h3{
+  font-size: 5vh;
+  margin: 0; 
+}
 
-#transitionscreen{
+.screen{
   position: fixed; 
   width: 100vw; 
   height: 100vh; 
@@ -210,15 +217,23 @@ h2{
   font-size: 10vh; 
 }
 @media only screen and (max-width: 768px) {
-  .leftimage {
-    width: 70vw; 
-    height: 70vw;
+  .leftimage, .rightimage {
+    width: 60vw; 
+    height: 60vw; 
     left: 0; 
     right: 0; 
+    margin:inherit 
   }
   .workcontainer{
     background: green; 
     min-height: 70vh;
+  }
+  .workdesc{
+    width: inherit; 
+    top: 70vw; 
+    left: 0; 
+    text-align: center; 
+    padding: 0; 
   }
   
 }

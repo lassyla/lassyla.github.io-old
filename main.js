@@ -158,12 +158,12 @@ var animate = function () {
 
 animate(); 
 
-function goToGal(){
+function redir(x){
     $("#transitionscreen").html("loading..."); 
-
-    $("#transitionscreen").animate({"right":"0", "opacity":1}, 1000, function(){window.location.href = "./illustrations.html";
+    $("#transitionscreen").animate({"right":"0", "opacity":1}, 1000, function(){window.location.href = x;
     });
 }
+
 $(window).on("load", function(){
   $("#transitionscreen").html("all done"); 
   setTimeout(function(){
