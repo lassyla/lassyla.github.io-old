@@ -1,23 +1,47 @@
 body{
   text-align: center; 
   margin: 0; 
+  font-family: Poiret One, sans-serif;
+  text-transform: lowercase; 
 }
-#home{
+@font-face {
+    font-family: Poiret One;
+    src:  url('styles/Poiret_One/PoiretOne-Regular.ttf');
+}
+
+#navs{
   font-size: 2vw; 
   position: fixed; 
   top: 0; 
   margin: 1vh; 
-  
 }
-#home:hover{
+#navs:hover{
   cursor: pointer; 
 }
 #home:after{
   opacity: 0; 
-  content:"go back?"; 
+  content:"personal site"; 
   transition: .5s; 
 }
 #home:hover:after{
+  transition: .5s; 
+  opacity: 1; 
+}
+#insta:after{
+  opacity: 0; 
+  content:"instagram"; 
+  transition: .5s; 
+}
+#insta:hover:after{
+  transition: .5s; 
+  opacity: 1; 
+}
+#youtube:after{
+  opacity: 0; 
+  content:"youtube"; 
+  transition: .5s; 
+}
+#youtube:hover:after{
   transition: .5s; 
   opacity: 1; 
 }
@@ -55,6 +79,7 @@ li:hover{
 ul{
   margin: 0;  
   padding: 0; 
+  margin-bottom: 6vh; 
 }
 .codebox {
   width: 300px; 
@@ -133,7 +158,6 @@ ul{
   display: block; 
   margin: auto; 
   max-width: 80vw; 
-
   top: 0;  
   bottom: 0; 
   left: 0; 
@@ -141,6 +165,7 @@ ul{
   position: absolute; 
   max-height: 90vh; 
   background: pink; 
+  z-index: 5; 
 }
 
 #backscreen{

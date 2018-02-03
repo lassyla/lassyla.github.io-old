@@ -2,8 +2,8 @@
 
 var codeboxes = document.getElementsByClassName("codebox");
 var currentbox; 
-var numboxes = 11;
 var currentgal = 0;
+var images; 
 
 function showDesc(x) {
   currentbox = x; 
@@ -13,7 +13,7 @@ function showDesc(x) {
     {
       $("#right").css({"visibility":"hidden"});
     }
-  else if(x == numboxes)
+  else if(x == images.length - 1)
     {
       $("#left").css({"visibility":"hidden"});
     }
@@ -23,7 +23,9 @@ function showDesc(x) {
     $("#right").css({"visibility":"visible"});
 
   }
-  $("#content").attr("src", $("#gal" + currentgal)[0].getElementsByClassName("codeimg")[numboxes-currentbox].src);
+ images = $("#gal" + currentgal)[0].getElementsByClassName("codeimg");  
+
+  $("#content").attr("src", images[images.length-currentbox - 1].src);
 
 
 }
@@ -35,21 +37,21 @@ function hideDesc() {
 }
 
 function goLeft(){
-  if(currentbox == numboxes - 1)
+  if(currentbox == images.length - 2)
     $("#left").css({"visibility":"hidden"});
   if(currentbox == 0)
     $("#left").css({"visibility":"visible"});
   currentbox ++; 
-  $("#content").attr("src", $("#gal" + currentgal)[0].getElementsByClassName("codeimg")[numboxes-currentbox].src);
+  $("#content").attr("src", images[images.length-currentbox - 1].src);
 }
 
 function goRight(){
   if(currentbox == 1)
     $("#right").css({"visibility":"hidden"});
-  if(currentbox == numboxes)
+  if(currentbox == images.length - 1)
     $("#left").css({"visibility":"visible"});
     currentbox --; 
-  $("#content").attr("src", $("#gal" + currentgal)[0].getElementsByClassName("codeimg")[numboxes-currentbox].src);
+  $("#content").attr("src", images[images.length-currentbox - 1].src);
 
 }
 
@@ -60,6 +62,7 @@ function goToGal(x){
     currentgal = x; 
     $("#gal" + currentgal).removeClass("hidden"); 
     $("#nav")[0].getElementsByTagName("li")[currentgal].style.color = "blue"; 
+    images = $("#gal" + currentgal)[0].getElementsByClassName("codeimg");  
 
   }
 }
@@ -76,5 +79,6 @@ $(window).on("load", function(){
   setTimeout(function(){
     $("#transitionscreen").animate({"left":"-100vw", "opacity":0}, 1000)
   }, 1000); 
+ images = $("#gal" + currentgal)[0].getElementsByClassName("codeimg");  
 
 }); 

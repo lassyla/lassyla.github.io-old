@@ -1,7 +1,8 @@
-//TO DO: the scroller() doesnt do anything
-//TO DO: create graphics
-//TO DO: design the divs for projects. think especially about responsive design. 
-//instead of going left on transition screen, open like doors
+//TO DO: CONTENT???????????? LOLLLLLL
+//TO DO: make archive for old works
+//TO DO: fix the ugly navbar
+//TO DO: add contact links
+//TO DO: footer
 
 var scrolltimeout; 
 var numpages = 3; 
@@ -20,18 +21,15 @@ $("#wrapper").scroll(function () {
 }); 
 
 function scroller() {
-  var currentpos = $("#wrapper").scrollTop(); 
+  var currentpos = $("#wrapper").scrollTop() + $(window).height() / 2; 
   if(currentpos >= $("#page" + currentpage).position().top && currentpos < $("#page" + currentpage).position().top  + $("#page" + i).height())
     return; 
   for(var i = 0; i <= numpages; i++) 
     if(currentpos >= $("#page" + i).position().top && currentpos < $("#page" + i).position().top  + $("#page" + i).height()){
-        $("#nav" + currentpage).animate({
-          color: "black"
-        }, 50);        
+        $("#nav" + currentpage).removeClass("selected");
         currentpage = i; 
-        $("#nav" + currentpage).animate({
-          color: "white"
-        }, 50); 
+        $("#nav" + currentpage).addClass("selected");
+        $("#page" + currentpage).removeClass("hide"); 
         return;
       }
 }
@@ -45,32 +43,15 @@ function gotopage(x) {
     $("html, body").stop();
   });
   if(currentpage != x){
-    $("#nav" + currentpage).animate({
-      color: "black"
-    }, 50);        
+        $("#nav" + currentpage).removeClass("selected");
     currentpage = x; 
-    $("#nav" + currentpage).animate({
-      color: "white"
-    }, 50); 
+        $("#nav" + currentpage).addClass("selected");
   }
   
         
 }
 
-function togglenav(){
-  if(nav){
-    $("#navbar").animate({
-      right: "-100px"
-    }, 200);        
-    nav = false; 
-  }
-  else{
-    $("#navbar").animate({
-      right: 0
-    }, 200);
-    nav = true; 
-  }
-}
+
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
@@ -79,7 +60,7 @@ if(window.innerWidth > window.innerHeight)
   renderer.setSize(window.innerHeight, window.innerHeight);
 else 
   renderer.setSize(window.innerWidth, window.innerWidth);
-renderer.setClearColor(0xffffff, .2); 
+renderer.setClearColor(0xffffff, 0); 
 document.getElementById("threedcontainer").appendChild(renderer.domElement);
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshBasicMaterial({color: 0x00ff00});

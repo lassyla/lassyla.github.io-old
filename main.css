@@ -3,8 +3,12 @@ body {
   overflow-x: hidden; 
   overflow-y: hidden; 
   color: white; 
-  font-family: 'Poiret One', cursive;
-
+  font-family: Poiret One, sans-serif;
+  text-transform: lowercase; 
+}
+@font-face {
+    font-family: Poiret One;
+    src:  url('styles/Poiret_One/PoiretOne-Regular.ttf');
 }
 #cover {
   width: 100%; 
@@ -22,9 +26,9 @@ body {
 #background1{
   background: url('background.png') no-repeat center ;
   background-size: cover;
-  width: 100vw; 
+  width: 100%; 
   position: absolute; 
-  transform: translateZ(-1px) scale(2);  
+  transform: translateZ(-1px) scale(1.501);  
 }
 #background2{
   position: absolute; 
@@ -43,6 +47,11 @@ body {
   padding: 1px;
   background-size: 100%; 
   margin-top: 0; 
+  transition: 1s; 
+}
+.hide{
+  opacity: 0; 
+  transition: 1s; 
 }
 #page0 {
   text-align: center; 
@@ -81,25 +90,27 @@ body {
 #navbar-list li {
   display: inline; 
   font-size: 2vh; 
+  color: white; 
   z-index: 5; 
   cursor: pointer; 
   padding: 1vh; 
   transition: .5s; 
 }
-#navbar-list li:hover {
-  color: white;
+.selected{
+  font-style: bold; 
+  background: rgba(255, 255, 255, .3); 
   transition: .5s; 
 }
 h1 {
   text-align: center; 
   width: 100%; 
   font-size: 10vh; 
-  text-transform: lowercase; 
   z-index: 2; 
+  font-style: normal;
 }
 .desc {
+  padding: 3vw; 
   font-size: 3vw; 
-  width: 100%; 
 }
 #scrolldown{
   position: absolute; 

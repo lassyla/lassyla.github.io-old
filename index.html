@@ -17,8 +17,7 @@
 <!--    <div id="cover"> under construction bee p beep</div>-->
     <div id="navbar"> 
       <ul id="navbar-list"> 
-        <img id="navbutton" src="logo2.png" onclick="togglenav()">
-        <li id="nav0" onclick="gotopage(0)" style="color: white">⌂</li>
+        <li id="nav0" onclick="gotopage(0)" class="selected">⌂</li>
         <li id="nav1" onclick="gotopage(1)">about</li>
         <li id="nav2" onclick="gotopage(2)">work</li>
         <li id="nav3" onclick="gotopage(3)">contact</li>
@@ -27,71 +26,67 @@
     <div id="wrapper">
       <div id="background1"> </div>
       <div id="background2">      </div>
-
       <div id="midground">
           <section class="page" id="page0"> 
           <div id="threedcontainer">      
-            <h1 id="lassyla">alyssa lee</h1>
+            <h1 id="lassyla">ALYSSA LEE</h1>
           </div>
           <img id="scrolldown" src="https://thumbs.gfycat.com/AcidicGlamorousCirriped-max-1mb.gif" onclick="gotopage(1)">
         </section>
 
-        <section class="page" id="page1"> 
+        <section class="page hide" id="page1"> 
           <h1>about</h1>
-          <div class="desc">Hello! I am Alyssa Lee, a freshman at Carnegie Mellon University!  </div>
+          <div class="desc">Hello! I am Alyssa Lee, a freshman at melons. I really like to do art, animation, and computer science. </div>
         </section>
 
-        <section class="page" id="page2"> 
-          <h1>work</h1>
+        <section class="page hide" id="page2"> 
+          <h1>my work</h1>
           <div class="workcontainer"> 
             <img src="images/goodbye%20room.png" class="leftimage" onclick="redir('./illustrations.html')">     
-            <div class="workdesc left"><h3>art gallery</h3>i like to do art! click here to see my gallery!
+            <div class="workdesc left"><h3>art gallery</h3> check out some of my recent paintings and animations. (html, javascript, jquery, css)
             </div>
           </div>
           <div class="workcontainer">
             <img src="logo2.png" class="rightimage">
-            <div class="workdesc right"><h3>bot-a-razzi</h3> an art project made with Connie Ye, Rain Du, and Lexin Yuan. 
+            <div class="workdesc right"><h3>bot-a-razzi</h3> a VR experience made with Connie Ye, Rain Du, and Lexin Yuan for our freshman Concept Studio class.  (a-frame, javascript)
             </div>
           </div>
           <div class="workcontainer">
             <img src="images/snowgum.png" class="leftimage" onclick="redir('www.connieye.com/Snow-Gum/temp.html')">
-            <div class="workdesc left"><h3>snow gum</h3>a project made at </div>
+            <div class="workdesc left"><h3>snow gum</h3>a game for language-learning made at HackCMU with Connie Ye and Cece Brower. (html canvas, javascript, annyang)</div>
           </div>
           <div class="workcontainer">
             <img src="images/spritessquare.png" class="rightimage"
             onclick="redir('sorts/index.html')">
             <div class="workdesc right"><h3>selection sort</h3>
-              
+              A cute learning tool for selection sort. (unity)
             </div>
           </div>
           <div class="workcontainer">
             <img src="images/shelves.png" class="leftimage">
-            <div class="workdesc left">afterthought</div>
+            <div class="workdesc left"><h3>the afterthought</h3>art project for my Concept Studio class. (three.js, blender)</div>
           </div>
           <div class="workcontainer">
             <img src="images/codejest.png" class="rightimage">
-            <div class="workdesc right">code jest
+            <div class="workdesc right"><h3>code jest</h3> text adventure game that teaches coding, made with Lauren Zhang and Lisa Lo. (html, javascript, css)
             </div>
           </div>
           <div class="workcontainer">
             <img src="images/wfpreview.png" class="leftimage">
-            <div class="workdesc left">wiki fractal</div>
-          </div>
-          <div class="workcontainer">
-            <img src="images/wapreview.png" class="rightimage">
-            <div class="workdesc right">web app portfolio
-            </div>
+            <div class="workdesc left"><h3>archive</h3> I have a lot more projects that won't fit on this page! check them out!</div>
           </div>
         </section>
 
-        <section class="page" id="page3"> 
+        <section class="page hide" id="page3"> 
           <h1>contact</h1>
+          <div class="desc">email me at ___________ andrew email <br>
+          check out my instagram <br>
+          check out my youtube channel </div>
+        
         </section>
         
       </div>
     </div>
-
-
     <script src="main.js"></script>
 
   </body>

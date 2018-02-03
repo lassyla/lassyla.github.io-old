@@ -12,70 +12,55 @@
   <body>    
     <div id="transitionscreen">loading...</div>
 
-    <div id="home" onclick="goBack()">⌂</div>
-
+    <div id="navs">
+      <div id="home" class="nav" onclick="goBack()">⌂</div>
+      <div id="insta"class="nav" onclick="location.href = 'https://www.instagram.com/lassylaa/'">📷</div>
+      <div id="youtube" class="nav"onclick="location.href = 'https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA'">📺</div>
+    </div>
       <h1>art by alyssa lee</h1>
 
       <ul id="nav">
-        <li onclick="goToGal(0)" style="color: blue;"></li>
-        <li onclick="goToGal(1)">paintings</li>
-        <li onclick="goToGal(2)">doodles</li>
-        <li onclick="goToGal(3)">animation</li>
-        <li onclick="goToGal(4)">misc.</li>
+        <li onclick="goToGal(0)">paintings</li>
+        <li onclick="goToGal(1)">doodles</li>
+        <li onclick="goToGal(2)">animation</li>
+        <li onclick="goToGal(3)">misc.</li>
      </ul>
-
       <div id="gal0" class="gallery">
-          <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="images/garden.png"> desc 11 </div>            
-          <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="images/goodbye%20room.png"> desc 10 </div>
-          <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="images/phipps.png"> desc 9 </div>            
-          <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/artfriends.jpg"> desc 8 </div>
-          <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/catalyst.jpg"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/box.png"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/flamingo.jpg"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="logo2.png"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/garden.png"> desc 8 </div>
+        <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/goodbye%20room.png"> hello friendo </div>            
+        <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/phipps.png"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="images/box.png"> hello friendo </div>            
+        <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/catalyst.jpg"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>            
+        <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/flamingo.jpg"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="images/forest_monster.png"> hello friendo </div>            
+        <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="images/airhead.png"> hello friendo </div>
       </div>
       <div id="gal1" class="gallery hidden">
-          <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="logo2.png"> desc 11 </div>            
-          <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="logo2.png"> desc 10 </div>
-          <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="logo2.png"> desc 9 </div>            
-          <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/artfriends.jpg"> desc 8 </div>
-          <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/catalyst.jpg"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/box.png"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/flamingo.jpg"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="logo2.png"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="images/poo.png"> desc 11 </div>            
+        <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/breakfast%20stickers.png"> desc 10 </div>
+        <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/robutsflat.png"> desc 9 </div>            
+        <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/spritessquare.png"> desc 8 </div>
+        <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="images/final_stickers_white.png"> hello friendo </div>            
+        <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/fried_egg.png"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/mimi.png"> mimi from super paper mario</div>            
+        <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/mudkip.png"> mudkip from pokemon </div>
+        <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="images/nahs.png"> hello friendo </div>            
+        <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="images/codasheet.png"> hello friendo </div>
       </div>
-
-      <div id="gal2" class="gallery hidden">
-          <div class="codebox" onclick="showDesc(11)"><img class="codeimg" src="images/poo.png"> desc 11 </div>            
-          <div class="codebox" onclick="showDesc(10)"><img class="codeimg" src="images/breakfast%20stickers.png"> desc 10 </div>
-          <div class="codebox" onclick="showDesc(9)"><img class="codeimg" src="images/robutsflat.png"> desc 9 </div>            
-          <div class="codebox" onclick="showDesc(8)"><img class="codeimg" src="images/spritessquare.png"> desc 8 </div>
-          <div class="codebox" onclick="showDesc(7)"><img class="codeimg" src="images/final_stickers_white.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(6)"><img class="codeimg" src="images/fried_egg.png"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(5)"><img class="codeimg" src="logo2.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(4)"><img class="codeimg" src="images/artie.jpg"> hello friendo </div>
-          <div class="codebox" onclick="showDesc(3)"><img class="codeimg" src="images/mimi.png"> mimi from super paper mario</div>            
-          <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/mudkip.png"> mudkip from pokemon </div>
-          <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="images/pixel.png"> hello friendo </div>            
-          <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="images/codasheet.png"> hello friendo </div>
+      <div id="gal2" class="gallery hidden"> 
+        <iframe class="codebox" src="https://www.youtube.com/embed/8kb6DQRK9o0" frameborder="0"  allowfullscreen></iframe>
+        <iframe  class="codebox" src="https://www.youtube.com/embed/08Mpdfpk7ho" frameborder="0" allowfullscreen></iframe>
+        <iframe class="codebox"  src="https://www.youtube.com/embed/jQoMUqmzaWs" frameborder="0"  allowfullscreen></iframe>
+        <iframe class="codebox"  src="https://www.youtube.com/embed/-N6Re6cZ17o" frameborder="0"  allowfullscreen></iframe>
+        <iframe class="codebox"  src="https://www.youtube.com/embed/AUd70Vv_uIQ" frameborder="0"  allowfullscreen></iframe>
+        <iframe class="codebox"  src="https://www.youtube.com/embed/RwoboZ_4BuQ" frameborder="0"  allowfullscreen></iframe>
       </div>
-    
-    <div id="gal3" class="gallery hidden"> 
-      <iframe class="codebox" src="https://www.youtube.com/embed/8kb6DQRK9o0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <iframe  class="codebox" src="https://www.youtube.com/embed/08Mpdfpk7ho" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <iframe class="codebox"  src="https://www.youtube.com/embed/jQoMUqmzaWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <iframe class="codebox"  src="https://www.youtube.com/embed/-N6Re6cZ17o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <iframe class="codebox"  src="https://www.youtube.com/embed/AUd70Vv_uIQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <iframe class="codebox"  src="https://www.youtube.com/embed/RwoboZ_4BuQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+      <div id="gal3" class="gallery hidden"> 
+        <div class="codebox" onclick="showDesc(2)"><img class="codeimg" src="images/angiespin.gif"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(1)"><img class="codeimg" src="images/coda.gif"> hello friendo </div>
+        <div class="codebox" onclick="showDesc(0)"><img class="codeimg" src="images/catsanddogs.jpg"> hello friendo </div>
+      </div>
       <div id="screen">
         <div id="backscreen" onclick="hideDesc()"></div>
         <div id="left" onclick="goLeft()">< </div>
@@ -83,7 +68,5 @@
         <div id="right" onclick="goRight()">>
         </div>
       </div>
-    
-
   </body>
 </html>
