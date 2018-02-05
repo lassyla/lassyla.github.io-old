@@ -6,14 +6,19 @@ body{
 }
 @font-face {
     font-family: Poiret One;
-    src:  url('styles/Poiret_One/PoiretOne-Regular.ttf');
+    src:  url('Poiret_One/PoiretOne-Regular.ttf');
 }
 
 #navs{
   font-size: 2vw; 
   position: fixed; 
   top: 0; 
-  margin: 1vh; 
+  margin: 4vh; 
+}
+#navs img{
+  height: 3vh; 
+  float: left; 
+  margin-top: 1vh; 
 }
 #navs:hover{
   cursor: pointer; 
@@ -22,6 +27,7 @@ body{
   opacity: 0; 
   content:"personal site"; 
   transition: .5s; 
+  position: absolute; 
 }
 #home:hover:after{
   transition: .5s; 
@@ -31,6 +37,9 @@ body{
   opacity: 0; 
   content:"instagram"; 
   transition: .5s; 
+    position: absolute; 
+  top: 4vh; 
+
 }
 #insta:hover:after{
   transition: .5s; 
@@ -40,6 +49,8 @@ body{
   opacity: 0; 
   content:"youtube"; 
   transition: .5s; 
+    position: absolute; 
+  top: 8vh; 
 }
 #youtube:hover:after{
   transition: .5s; 
@@ -80,6 +91,15 @@ ul{
   margin: 0;  
   padding: 0; 
   margin-bottom: 6vh; 
+}
+a{
+  color:white;
+}
+a:link{
+  color: white; 
+}
+a:visited{
+  color:white;
 }
 .codebox {
   width: 300px; 
@@ -178,7 +198,7 @@ ul{
   position: fixed; 
   width: 100vw; 
   height: 100vh; 
-  background-color: blue; 
+  background-color: #F98D8D; 
   z-index: 10; 
   top: 0; 
   text-align: center; 

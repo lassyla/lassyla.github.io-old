@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
     <title>Hey I'm Alyssa</title>
-    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="styles/main.css"> 
 <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/three.js"></script>
 
   </head>
   <body>
@@ -17,11 +16,16 @@
 <!--    <div id="cover"> under construction bee p beep</div>-->
     <div id="navbar"> 
       <ul id="navbar-list"> 
-        <li id="nav0" onclick="gotopage(0)" class="selected">⌂</li>
+        <li id="nav0" onclick="gotopage(0)">⌂</li>
         <li id="nav1" onclick="gotopage(1)">about</li>
         <li id="nav2" onclick="gotopage(2)">work</li>
         <li id="nav3" onclick="gotopage(3)">contact</li>
       </ul>
+      <ul id="navbar-links">
+      <li onclick="location.href = 'https://www.instagram.com/lassylaa/'">instagram</li>
+      <li onclick="location.href = 'https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA'">youtube</li>
+      <li onclick="location.href = 'https://github.com/lassyla'">github</li>
+      <li onclick="location.href = 'resume%20spring%202018.pdf'">resume</li></ul>
     </div>
     <div id="wrapper">
       <div id="background1"> </div>
@@ -29,65 +33,70 @@
       <div id="midground">
           <section class="page" id="page0"> 
           <div id="threedcontainer">      
-            <h1 id="lassyla">ALYSSA LEE</h1>
+            <h1 id="lassyla">alyssa lee</h1>
           </div>
-          <img id="scrolldown" src="https://thumbs.gfycat.com/AcidicGlamorousCirriped-max-1mb.gif" onclick="gotopage(1)">
+          <img id="scrolldown" src="images/scroll.png" onclick="gotopage(1)">
         </section>
 
         <section class="page hide" id="page1"> 
-          <h1>about</h1>
-          <div class="desc">Hello! I am Alyssa Lee, a freshman at melons. I really like to do art, animation, and computer science. </div>
+          <h1>about me</h1>
+          <div class="desc">Hello! I am Alyssa Lee, a freshman at Carnegie Mellon University. I love art and computer science! Scroll down to see some of my projects.  <br> <br> <br> <br> <br> (by the way, some parts of my website are under construction. sorry for any inconvenience!) </div>
         </section>
 
         <section class="page hide" id="page2"> 
           <h1>my work</h1>
           <div class="workcontainer"> 
             <img src="images/goodbye%20room.png" class="leftimage" onclick="redir('./illustrations.html')">     
-            <div class="workdesc left"><h3>art gallery</h3> check out some of my recent paintings and animations. (html, javascript, jquery, css)
+            <div class="workdesc left"><h3>art gallery</h3> check out some of my recent paintings and animations.
             </div>
           </div>
           <div class="workcontainer">
-            <img src="logo2.png" class="rightimage">
-            <div class="workdesc right"><h3>bot-a-razzi</h3> a VR experience made with Connie Ye, Rain Du, and Lexin Yuan for our freshman Concept Studio class.  (a-frame, javascript)
+            <img src="images/bots.png" class="rightimage" onclick="redir('https://youtu.be/R-ySfk5PLh8')">
+            <div class="workdesc right"><h3>bot-a-razzi</h3> a VR project made with Connie Ye, Rain Du, and Lexin Yuan. You can experience two perspectives <a href="https://connieye.com/bot-a-razzi/index.html">here</a> and <a href="https://connieye.com/bot-a-razzi/social-media-interface.html">here</a>. (a-frame, javascript)
             </div>
           </div>
           <div class="workcontainer">
-            <img src="images/snowgum.png" class="leftimage" onclick="redir('www.connieye.com/Snow-Gum/temp.html')">
+            <img src="images/snowgum.png" class="leftimage" onclick="redir('https://www.connieye.com/Snow-Gum/temp.html')">
             <div class="workdesc left"><h3>snow gum</h3>a game for language-learning made at HackCMU with Connie Ye and Cece Brower. (html canvas, javascript, annyang)</div>
           </div>
           <div class="workcontainer">
             <img src="images/spritessquare.png" class="rightimage"
             onclick="redir('sorts/index.html')">
             <div class="workdesc right"><h3>selection sort</h3>
-              A cute learning tool for selection sort. (unity)
+              A cute learning tool for visualizing and practicing selection sort on an array. (unity)
             </div>
           </div>
           <div class="workcontainer">
-            <img src="images/shelves.png" class="leftimage">
-            <div class="workdesc left"><h3>the afterthought</h3>art project for my Concept Studio class. (three.js, blender)</div>
+            <img src="images/shelves.png" class="leftimage" onclick="redir('http://lassyla.me/Shelves/index.html')">
+            <div class="workdesc left"><h3>the afterthought</h3>an interactive art project for my Concept Studio class. (three.js, blender)</div>
           </div>
           <div class="workcontainer">
-            <img src="images/codejest.png" class="rightimage">
-            <div class="workdesc right"><h3>code jest</h3> text adventure game that teaches coding, made with Lauren Zhang and Lisa Lo. (html, javascript, css)
+            <img src="images/codejest.png" class="rightimage" onclick="redir('http://lassyla.me/CodeJest/index.html')">
+            <div class="workdesc right"><h3>code jest</h3> a text adventure game that teaches coding, made with Lauren Zhang and Lisa Lo for hackED. First place winner! (html, javascript, css)
             </div>
           </div>
           <div class="workcontainer">
-            <img src="images/wfpreview.png" class="leftimage">
+            <img src="images/wapreview.png" class="leftimage" onclick="redir('projects.html')">
             <div class="workdesc left"><h3>archive</h3> I have a lot more projects that won't fit on this page! check them out!</div>
           </div>
         </section>
 
         <section class="page hide" id="page3"> 
-          <h1>contact</h1>
-          <div class="desc">email me at ___________ andrew email <br>
-          check out my instagram <br>
-          check out my youtube channel </div>
+          <h1>contact me!</h1>
+          <div class="desc">
+            <form action="https://formspree.io/alyssal@andrew.cmu.edu"
+                method="POST">
+              <textarea id="msg" name="name" placeholder="your message"></textarea><br>
+              <input  type="email" name="_replyto"placeholder="your email">
+              <input  type="submit" value="Send" id="submit">
+              <input type="text" name="_gotcha" style="display:none" />
+            </form></div>
         
         </section>
         
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 </html>

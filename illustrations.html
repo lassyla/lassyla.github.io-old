@@ -2,25 +2,25 @@
 <html lang="en">
   <head>
     <title>Hey I'm Alyssa</title>
-    <link rel="stylesheet" href="gallery.css"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
-    <script src="gallery.js"></script>
+    <link rel="stylesheet" href="styles/gallery.css"> 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/gallery.js"></script>
+
 
   </head>
   <body>    
     <div id="transitionscreen">loading...</div>
 
     <div id="navs">
-      <div id="home" class="nav" onclick="goBack()">⌂</div>
-      <div id="insta"class="nav" onclick="location.href = 'https://www.instagram.com/lassylaa/'">📷</div>
-      <div id="youtube" class="nav"onclick="location.href = 'https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA'">📺</div>
+      <div id="home" class="nav" onclick="goBack()"><img src="images/home.png"></div>
+      <div id="insta"class="nav" onclick="location.href = 'https://www.instagram.com/lassylaa/'"><img src="images/insta.png"></div>
+      <div id="youtube" class="nav"onclick="location.href = 'https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA'">
+        <img src="images/youtube.png"></div>
     </div>
       <h1>art by alyssa lee</h1>
 
       <ul id="nav">
-        <li onclick="goToGal(0)">paintings</li>
+        <li onclick="goToGal(0)" style="color:blue">paintings</li>
         <li onclick="goToGal(1)">doodles</li>
         <li onclick="goToGal(2)">animation</li>
         <li onclick="goToGal(3)">misc.</li>
