@@ -35,7 +35,7 @@ function gotopage(x) {
   var time = Math.abs(currentpage - x) * 600 ; 
   $('#wrapper').animate({
     scrollTop: $("#page" + x).position().top  + 'px'
-  }, time, 'easeOutQuad'); 
+  }, time); 
   $(window).bind("mousewheel", function() {
     $("html, body").stop();
   });
