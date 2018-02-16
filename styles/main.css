@@ -285,7 +285,7 @@ input, textarea{
 #submit{
   padding: 1vh; 
 }
-@media (min-width:600px)  {  .leftimage, .rightimage {
+@media (max-width:640px)  {  .leftimage, .rightimage {
     width: 60vw; 
     height: 60vw; 
     max-height: 60vh; 
@@ -293,6 +293,7 @@ input, textarea{
     right: 0; 
     margin:inherit;
     margin-bottom: 0; 
+
   }
   .leftimage:hover, .rightimage:hover{
     left: -1vh; 
@@ -304,11 +305,13 @@ input, textarea{
   }
   .workdesc{
     width: inherit; 
-    top: 70vw; 
+    margin-top: 70vw;
+    margin-bottom: 50vw; 
     left: 0; 
     text-align: center; 
     padding: 0; 
     font-size: 5vw; 
+    z-index: 6; 
   }
   .desc{
     font-size: 5vw; 
