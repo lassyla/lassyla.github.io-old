@@ -285,7 +285,8 @@ input, textarea{
 #submit{
   padding: 1vh; 
 }
-@media (max-width:640px)  {  .leftimage, .rightimage {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .leftimage, .rightimage {
     width: 60vw; 
     height: 60vw; 
     max-height: 60vh; 
