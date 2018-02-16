@@ -285,14 +285,14 @@ input, textarea{
 #submit{
   padding: 1vh; 
 }
-@media only screen and (max-width: 768px), 
-@media only screen and (max-device-width:480px){
-  .leftimage, .rightimage {
+@media (min-width:600px)  {  .leftimage, .rightimage {
     width: 60vw; 
     height: 60vw; 
+    max-height: 60vh; 
     left: 0; 
     right: 0; 
-    margin:inherit 
+    margin:inherit;
+    margin-bottom: 0; 
   }
   .leftimage:hover, .rightimage:hover{
     left: -1vh; 
@@ -303,7 +303,6 @@ input, textarea{
     min-height: 60vh;
   }
   .workdesc{
-    margin-top: 2vh;
     width: inherit; 
     top: 70vw; 
     left: 0; 
@@ -316,6 +315,13 @@ input, textarea{
   }
   #msg{
     width: 90%; 
+  }
+  #navbar-list li {
+    display: none; 
+  }
+  #navbar {
+    float: right; 
+    font-size: 3.5vw;  
   }
 }
 ::-webkit-scrollbar {
