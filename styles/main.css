@@ -89,6 +89,7 @@ body {
 #navbar-list {
   display: inline; 
   top: 0;
+  max-width: 50%; 
 }
 #navbar-list li {
   display: inline; 
@@ -107,6 +108,7 @@ body {
   margin-right: 2vw; 
   display: inline;
   margin-top: 0; 
+  max-width: 50%; 
 }
 #navbar-links li{
   display: inline; 
