@@ -75,7 +75,6 @@ a{
   cursor:pointer; 
 }
 #navbar {
-  width: 100%;
   position: fixed; 
   z-index: 1; 
   height: 6vh; 
@@ -99,8 +98,9 @@ a{
 
 }
 #navbar-links{
-  float: right; 
-  margin-right: 2vw; 
+  position: absolute;
+  right: 2vw;
+  top: 2vw; 
   display: inline;
   margin-top: 0; 
   max-width: 50%; 

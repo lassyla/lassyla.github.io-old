@@ -8,9 +8,15 @@
     <link rel="icon" href="favicon.ico">
   </head>
   <body>
-    <div id="transitionscreen" class="screen">loading...</div>
+    <div id="transitionscreen" class="screen"><img src="images/loading.gif"></div>
 
-<!--    <div id="cover"> under construction bee p beep</div>-->
+<!--TO DO: 
+-change all animations to css animations
+-add lighting to models
+-
+
+-->
+    
     <div id="navbar"> 
       <ul id="navbar-list"> 
         <li id="nav0" onclick="gotopage(0)">⌂</li>
@@ -18,17 +24,19 @@
         <li id="nav2" onclick="gotopage(2)">work</li>
         <li id="nav3" onclick="gotopage(3)">contact</li>
       </ul>
-      <ul id="navbar-links">
-      <li><a href="https://www.instagram.com/lassylaa/">instagram</a></li>
-      <li><a href="https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA">youtube</a></li>
-      <li> <a href = "https://github.com/lassyla">github</a></li>
-      <li><a href="resume%20spring%202018.pdf">resume</a></li></ul>
     </div>
     <div id="wrapper">
       <div id="background1"> </div>
       <div id="background2">      </div>
       <div id="midground">
           <section class="page" id="page0"> 
+            <ul id="navbar-links">
+              <li><a href="https://www.instagram.com/lassylaa/">instagram</a></li>
+              <li><a href="https://www.youtube.com/channel/UCHLbkWq4CvQ5D-ts8AGATzA">youtube</a></li>
+              <li> <a href = "https://github.com/lassyla">github</a></li>
+              <li><a href="resume%20fall%202018.pdf">resume</a></li>
+            </ul>
+
           <div id="threedcontainer">      
             <h1 id="lassyla">alyssa lee</h1>
           </div>
@@ -44,7 +52,7 @@
           <h1>my work</h1>
           <div class="workcontainer"> 
             <img src="images/goodbye%20room.png" class="leftimage" onclick="redir('./illustrations.html')">     
-            <div class="workdesc left"><h3>art gallery</h3> Check out some of my recent paintings and animations.
+            <div class="workdesc left"><h3>art gallery</h3> Check out some of my recent paintings and animations!
             </div>
           </div>
           <div class="workcontainer">
@@ -74,8 +82,13 @@
             </div>
           </div>
           <div class="workcontainer">
-            <img src="images/wapreview.png" class="leftimage" onclick="redir('projects.html')">
-            <div class="workdesc left"><h3>archive</h3> I have a lot more projects that won't fit on this page! check them out!</div>
+            <img src="images/gghippo.png" class="leftimage" onclick="redir('http://lassyla.me/hippo/index.html')">
+            <div class="workdesc left"><h3>greedy greedy hippo</h3> a TSP algorithm visualizer made with d3.js! (javascript, d3.js)
+            </div>
+          </div>
+          <div class="workcontainer">
+            <img src="images/wapreview.png" class="rightimage" onclick="redir('projects.html')">
+            <div class="workdesc right"><h3>archive</h3> I have a lot more projects that won't fit on this page! check them out!</div>
           </div>
         </section>
 

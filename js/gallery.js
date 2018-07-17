@@ -26,8 +26,6 @@ function showDesc(x) {
  images = $("#gal" + currentgal)[0].getElementsByClassName("codeimg");  
 
   $("#content").attr("src", images[images.length-currentbox - 1].src);
-
-
 }
 
 function hideDesc() {
@@ -37,6 +35,7 @@ function hideDesc() {
 }
 
 function goLeft(){
+  if(currentbox == images.length - 1) return; 
   if(currentbox == images.length - 2)
     $("#left").css({"visibility":"hidden"});
   if(currentbox == 0)
@@ -46,6 +45,7 @@ function goLeft(){
 }
 
 function goRight(){
+  if(currentbox == 0) return; 
   if(currentbox == 1)
     $("#right").css({"visibility":"hidden"});
   if(currentbox == images.length - 1)
@@ -68,17 +68,29 @@ function goToGal(x){
 }
 
 function goBack(){
-  $("#transitionscreen").html("loading..."); 
   $("#transitionscreen").animate({"left":"0", "opacity":1}, 1000, function(){window.location.href = "./index.html";
 }); 
 
 }
 
 $(window).on("load", function(){
-  $("#transitionscreen").html("all done"); 
   setTimeout(function(){
     $("#transitionscreen").animate({"left":"-100vw", "opacity":0}, 1000)
   }, 1000); 
  images = $("#gal" + currentgal)[0].getElementsByClassName("codeimg");  
 
 }); 
+
+window.onkeydown = function(e){
+    switch(e.keyCode){
+      case 37: 
+        goLeft(); 
+        break;
+      case 39: 
+        goRight(); 
+        break; 
+      case 40: 
+        hideDesc();
+        break; 
+    }
+};

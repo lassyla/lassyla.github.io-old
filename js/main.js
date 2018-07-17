@@ -118,9 +118,18 @@ window.addEventListener('resize', function() {
     document.getElementById("threedcontainer").marginTop = window.innerHeight - window.innerWidth + "px"; 
   }
 });
-var light = new THREE.PointLight( 0xffffff, 3, 100 );
-light.position.set( 50, 50, 50 );
-scene.add( light );
+var light1 = new THREE.PointLight( 0xffff66, 3, 100 );
+light1.position.set( 50, 50, 50 );
+scene.add( light1 );
+
+var light3 = new THREE.AmbientLight( 0x66aaff, 1, 100 );
+light3.position.set( 0, 50, 50 );
+scene.add( light3 );
+
+var light2= new THREE.PointLight( 0xffaabb, 1, 100 );
+light2.position.set( 50, 0, 50 );
+scene.add( light2 );
+
 var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2();
 var intersect; 
@@ -166,14 +175,12 @@ var animate = function () {
 animate(); 
 
 function redir(x){
-    $("#transitionscreen").html("loading..."); 
     $("#transitionscreen").animate({"right":"0", "opacity":1}, 1000, function(){
       setTimeout(function(){window.location.href = x}, 200);
     });
 }
 
 $(window).on("load", function(){
-  $("#transitionscreen").html("all done"); 
   setTimeout(function(){
     $("#transitionscreen").animate({"right":"-100vw", "opacity":0}, 1000)
   }, 1000); 
